@@ -7,6 +7,8 @@ d3.csv('data/shark-encounters.csv', d3.autoType).then(function(data) {
     // Instantiate the visualizations
     barChart = new BarChart('activities-bar-chart', data)
 
+    console.log(data)
+
 
 })
 
