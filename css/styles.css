@@ -23,6 +23,18 @@ body {
     font-family: Georgia;
 }
 
+#project-title-text-1 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+}
+
+#project-title-text-2 {
+    color: #0a569a;
+    font-size: 40px;
+    font-family: Georgia;
+}
+
 #nj-incident-text {
     color: #0a569a;
     font-size: 50px;
