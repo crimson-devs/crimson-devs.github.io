@@ -16,7 +16,7 @@ class BarChart {
 
         console.log('here (initVis)')
 
-        vis.margin = {top: 40, right: 20, bottom: 40, left: 50};
+        vis.margin = {top: 50, right: 40, bottom: 50, left: 60};
         vis.width = 800 - vis.margin.left - vis.margin.right;
 //        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 700 - vis.margin.top - vis.margin.bottom;
@@ -52,6 +52,23 @@ class BarChart {
 
         vis.yAxisGroup = vis.svg.append('g')
             .attr('class', 'y-axis axis');
+
+
+        // create axis labels
+
+        // vertical axis
+        vis.svg.append('text')
+            .attr('x', -55)
+            .attr('y', -10)
+            .text('Occurrences')
+            .style('font-weight', 600)
+
+        // horizontal axis
+        vis.svg.append('text')
+            .attr('x', vis.width - 28)
+            .attr('y', vis.height + 40)
+            .text('Activity')
+            .style('font-weight', 600)
 
         this.wrangleData()
 

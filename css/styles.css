@@ -73,6 +73,14 @@ body {
     padding-bottom: 100px;
 }
 
+#species-text-2 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 #activities-text-1 {
     color: #0a569a;
     font-size: 50px;
@@ -86,6 +94,70 @@ body {
     font-family: Georgia;
     padding-top: 100px;
 }
+
+#shark-population-text-2 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-3 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-2 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-3 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-4 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-5 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-6 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-7 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#shark-population-text-8 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
 
 #ocean-reliance-text-1 {
     color: #0a569a;
@@ -101,7 +173,20 @@ body {
     padding-top: 100px;
 }
 
+#actions-text-2 {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
 #actions-list-1 {
+    color: #0a569a;
+    font-size: 30px;
+    font-family: Georgia;
+}
+
+#references-text-1 {
     color: #0a569a;
     font-size: 30px;
     font-family: Georgia;
@@ -121,19 +206,36 @@ body {
     padding-top: 100px;
 }
 
-#shark-fatalities-counter {
+#shark-fatalities-counter-annually {
     color: #0a569a;
     font-size: 50px;
     font-family: Georgia;
     padding-top: 100px;
 }
 
+#shark-fatalities-hourly {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
 
 #air-breathe-question {
     color: #0a569a;
     font-size: 50px;
     font-family: Georgia;
     padding-top: 100px;
+}
+
+#our-team-text {
+    color: #0a569a;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 100px;
+}
+
+#outro {
+    height: 680px;
 }
 
 
@@ -175,6 +277,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('/assets/ocean-video.gif');
 }
 
 .sticky-thing p {
