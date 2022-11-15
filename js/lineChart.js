@@ -21,7 +21,7 @@ class LineChart {
         vis.height = 700 - vis.margin.top - vis.margin.bottom;
 //        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
-        // Initialize the drawing area
+        // initialize the drawing area
         vis.svg = d3.select('#' + vis.parentElement).append('svg')
             .attr('width', vis.width + vis.margin.left + vis.margin.right)
             .attr('height', vis.height + vis.margin.top + vis.margin.bottom)
@@ -29,10 +29,9 @@ class LineChart {
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
 
-        // Scales and axes
-        vis.xScale = d3.scaleBand()
-            .range( [ 0, vis.width ] )
-            .padding(0.4);
+        // scales and axes
+        vis.xScale = d3.scaleLinear()
+            .range( [ 0, vis.width ] );
 
         vis.yScale = d3.scaleLinear()
             .range( [ vis.height, 0 ] );
@@ -44,7 +43,7 @@ class LineChart {
             .scale(vis.yScale);
 
 
-        // Create the axis groups
+        // create the axis groups
         vis.xAxisGroup = vis.svg.append('g')
             .attr('class', 'x-axis axis')
             .attr('transform', 'translate(0, ' + vis.height + ')');
@@ -75,54 +74,47 @@ class LineChart {
 
         let vis = this;
 
-        // Update the domains
-        vis.xScale.domain(vis.data.map(function (d) { return d.Year; }));
+        // update the domains
+        vis.xScale.domain([ d3.min(vis.data, function(d) {return d.Year; }) - 3, d3.max(vis.data, function(d) {return d.Year; }) + 3 ] );
         vis.yScale.domain( [ 0, d3.max(vis.data, function(d) {return d.UnProvoked; }) ] );
 
-        // Draw the bars
+        // draw the line
         vis.lines = vis.svg.selectAll('.line')
             .data(vis.data)
 
         vis.lines.exit().remove();
 
         // Add the line
-        vis.svg.lines
-            .datum(data)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
+        vis.lines
+            .enter()
+            .append('rect')
+            .attr('class', 'line')
+            .merge(vis.lines)
+            .transition()
+            .duration(2000)
+            .style("opacity", 1.0)
+            .attr("d", function(d){
+                return d3.line()
+                    .x(function(d) { return x(d.Year); })
+                    .y(function(d) { return y(d.UnProvoked); })
+                    (d.values)
+            })
             .attr("stroke-width", 1.5)
-            .attr("d", d3.line()
-                .x(function(d) { return x(d.date) })
-                .y(function(d) { return y(d.value) })
-            )
+        // vis.lines.exit()
+        //     .transition().duration(1000).style("opacity", 0.0).remove()
 
-        // vis.bars
-        //     .enter()
-        //     .append('rect')
-        //     .attr('class', 'bar')
-        //     .merge(vis.bars)
+        // add the axes
+        // vis.xAxisGroup
         //     .transition()
         //     .duration(500)
-        //     .attr('x', d => vis.xScale(d.activity) )
-        //     .attr('y', d => vis.yScale(d.value) )
-        //     .attr('width', vis.xScale.bandwidth() )
-        //     .attr('height', function(d) { return vis.height - vis.yScale(d.value); })
-        //     .attr('fill', 'orange')
-        //     .attr('stroke', 'grey');
-
-
-        // Add the axes
-        vis.xAxisGroup
-            .transition()
-            .duration(500)
-            .style('font-size', '15px')
-            .call(d3.axisBottom((vis.xScale)));
-
-        vis.yAxisGroup
-            .transition()
-            .duration(500)
-            .style('font-size', '15px')
-            .call(d3.axisLeft(vis.yScale));
+        //     .style('font-size', '15px')
+        //     .call(d3.axisBottom((vis.xScale)));
+        //
+        // vis.yAxisGroup
+        //     .transition()
+        //     .duration(500)
+        //     .style('font-size', '15px')
+        //     .call(d3.axisLeft(vis.yScale));
 
 
     }
