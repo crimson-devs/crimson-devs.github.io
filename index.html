@@ -29,6 +29,12 @@
                         <div id="opening-text" class="col-12 border">
                             Come on in, the water's fine...
                         </div>
+                        <div id="initial-scroll-icon" class="col-12 align-text-bottom border">
+                            <section id="section-1" class="initial-scroll">
+                                <h1></h1>
+                                <a href="#jaws-text-1"><span></span>Scroll</a>
+                            </section>
+                        </div>
                     </div>
             </div>
 
@@ -72,8 +78,16 @@
 
                     <div class="row step justify-content-center" data-step="6">
                         <div data-scroll-indicator-title="Level Set">
-                            <div id="nj-incident-text" class="col-12 border">
-                                In July 1916, five people were "attacked" by sharks while swimming along the coast of New Jersey.  Since then, the media and popular culture have unjustly characterized sharks as predators with an insatiable appetite for human flesh.
+                            <div id="nj-incident-text-1" class="col-12 border">
+                                In July 1916, five people were "attacked" by sharks while swimming along the coast of New Jersey.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row step justify-content-center" data-step="6">
+                        <div data-scroll-indicator-title="Level Set">
+                            <div id="nj-incident-text-2" class="col-12 border">
+                                Since then, the media and popular culture have unjustly characterized sharks as predators with an insatiable appetite for human flesh.
                             </div>
                         </div>
                     </div>
@@ -89,7 +103,7 @@
                     <div class="row step justify-content-center">
                         <div data-scroll-indicator-title="Changing Perception">
                             <div id="hook-text-2" class="col-12 border">
-                                What if we were to redefine the relationship we have with sharks to one based on <strong>scientific data</strong> rather than one based on limited an biased information?
+                                Let's redefine the relationship we have with sharks to one based on <strong>scientific data</strong> rather than limited an biased information.
                             </div>
                         </div>
                     </div>
@@ -264,7 +278,7 @@
                     <div class="row step justify-content-center">
                         <div data-scroll-indicator-title="Population Decline">
                             <div id="shark-population-text-4" class="col-12 border">
-                                Bycatch is responsible for an estimated <strong>half</strong> of all shark deaths each year.
+                                Bycatch is responsible for an estimated <strong>50 million</strong> shark deaths each year.
                             </div>
                         </div>
                     </div>
@@ -481,6 +495,16 @@
     });
 </script>
 
+
+<script>
+    $(function() {
+        $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($this).attr('href')).offset().top}, 500),
+            'linear');
+        });
+    });
+</script>
 
 <!-- Scrollama -->
 <script>

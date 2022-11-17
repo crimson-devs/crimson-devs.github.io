@@ -16,7 +16,7 @@ class BarChart {
 
         console.log('here (initVis)')
 
-        vis.margin = {top: 50, right: 40, bottom: 50, left: 60};
+        vis.margin = {top: 50, right: 50, bottom: 50, left: 80};
         vis.width = 800 - vis.margin.left - vis.margin.right;
 //        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 700 - vis.margin.top - vis.margin.bottom;
@@ -62,6 +62,7 @@ class BarChart {
             .attr('y', -10)
             .text('Occurrences')
             .style('font-weight', 600)
+            .style('fill', 'white');
 
         // horizontal axis
         vis.svg.append('text')
@@ -69,6 +70,7 @@ class BarChart {
             .attr('y', vis.height + 40)
             .text('Activity')
             .style('font-weight', 600)
+            .style('fill', 'white');
 
         this.wrangleData()
 
@@ -114,7 +116,7 @@ class BarChart {
             .attr('y', d => vis.yScale(d.value) )
             .attr('width', vis.xScale.bandwidth() )
             .attr('height', function(d) { return vis.height - vis.yScale(d.value); })
-            .attr('fill', 'orange')
+            .attr('fill', 'white')
             .attr('stroke', 'grey');
 
 
@@ -123,12 +125,14 @@ class BarChart {
             .transition()
             .duration(500)
             .style('font-size', '15px')
+            .style('color', 'white')
             .call(d3.axisBottom((vis.xScale)));
 
         vis.yAxisGroup
             .transition()
             .duration(500)
             .style('font-size', '15px')
+            .style('color', 'white')
             .call(d3.axisLeft(vis.yScale));
 
 
