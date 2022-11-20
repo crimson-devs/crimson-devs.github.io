@@ -1,12 +1,27 @@
+// Counter for average annual number of shark bites
+const sharkBitesCounter = new countUp.CountUp('shark-bites-counter', 70,
+    { enableScrollSpy: true,
+        duration: 20,
+        delay: 3,
+        useEasing: true,
+        scrollSpyDelay: 3,
+        prefix: '',
+        suffix: '',
+        scrollSpyOnce: true
+    }
+)
+sharkBitesCounter
+
 
 // Counter for average annual number of human fatalities
 const humanFatalitiesCounter = new countUp.CountUp('human-fatalities-counter', 12,
                                                         { enableScrollSpy: true,
                                                           duration: 5,
+                                                          delay: 3,
                                                           useEasing: true,
                                                           scrollSpyDelay: 3,
-                                                          prefix: 'Amazingly, there are fewer than  ',
-                                                          suffix: ' human fatalities resulting from shark bites each year.',
+                                                          prefix: '',
+                                                          suffix: '',
 //                                                          scrollSpyOnce: true
                                                         }
                                                    )
@@ -27,15 +42,3 @@ const sharkFatalitiesCounter = new countUp.CountUp('shark-fatalities-counter-ann
 sharkFatalitiesCounter
 
 
-// Counter for average annual number of shark bites
-const sharkBitesCounter = new countUp.CountUp('shark-bites-counter', 70,
-    { enableScrollSpy: true,
-        duration: 15,
-        useEasing: true,
-        scrollSpyDelay: 3,
-        prefix: 'Each year, sharks bite approximately ',
-        suffix: ' humans <i>globally</i>.',
-        scrollSpyOnce: true
-    }
-)
-sharkBitesCounter

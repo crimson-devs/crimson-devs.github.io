@@ -117,7 +117,7 @@ class BarChart {
             .attr('width', vis.xScale.bandwidth() )
             .attr('height', function(d) { return vis.height - vis.yScale(d.value); })
             .attr('fill', 'white')
-            .attr('stroke', 'grey');
+//            .attr('stroke', 'grey');
 
 
         // add the axes

@@ -1,3 +1,6 @@
+html{scroll-behavior: smooth}
+
+
 body {
     background-color: white;
     padding: 20px;
@@ -13,7 +16,7 @@ body {
 #opening-text {
     color: #456983;
     font-family: Georgia;
-    font-size: 80px;
+    font-size: 85px;
     margin-top: 180px;
 }
 
@@ -78,6 +81,27 @@ body {
 }
 
 #hook-text-3 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#shark-bites-misconception-text-1 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#shark-bites-misconception-text-2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#human-fatalities-text-1 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
@@ -196,21 +220,35 @@ body {
     color: white;
     font-size: 50px;
     font-family: Georgia;
-    padding-top: 100px;
+    padding: 30px;
+}
+
+#ocean-reliance-text-2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#ocean-reliance-text-3 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
 }
 
 #actions-text-1 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
-    padding-top: 100px;
+    padding: 30px;
 }
 
 #actions-text-2 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
-    padding-top: 100px;
+    padding: 30px;
 }
 
 #actions-list-1 {
@@ -227,15 +265,15 @@ body {
 
 #shark-bites-counter {
     color: white;
-    font-size: 50px;
-    font-family: Georgia;
+    font-size: 70px;
+    font-family: Arial;
     padding: 30px;
 }
 
 #human-fatalities-counter {
     color: white;
-    font-size: 50px;
-    font-family: Georgia;
+    font-size: 70px;
+    font-family: Arial;
     padding: 30px;
 }
 
@@ -265,6 +303,27 @@ body {
     font-size: 50px;
     font-family: Georgia;
     padding-top: 100px;
+}
+
+#ryan {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#karim {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#mj {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
 }
 
 #outro {
@@ -354,7 +413,7 @@ opening-section {
 CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
  */
 
-#scrolly {
+#scrolly-1 {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -363,11 +422,210 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     padding: 1rem;
 }
 
-#scrolly > * {
+#scrolly-1 > * {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
+
+#scrolly-2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-2 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-3 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-3 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-4 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-4 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-5 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-5 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-6 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-6 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-7 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-7 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-8 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-8 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-9 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-9 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-10 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-10 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-11 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-11 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-12 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-12 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-13 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-13 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-14 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-14 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+
+
+
 
 article {
     position: relative;
@@ -375,7 +633,7 @@ article {
     max-width: 50rem;
 }
 
-.sticky-thing {
+.sticky-thing-1 {
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
@@ -388,16 +646,331 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/assets/ocean-video.gif');
+    background-image: url('/assets/jaws-image.jpg');
     background-size: cover;
 }
 
-.sticky-thing p {
+.sticky-thing-1 p {
     padding: 1rem;
     font-size: 8rem;
     font-weight: 900;
     color: #fff;
 }
+
+.sticky-thing-2 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/philadelphia-inquirer.gif');
+    background-size: cover;
+}
+
+.sticky-thing-2 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-3 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/ocean-shark-touch.jpeg');
+    background-size: cover;
+}
+
+.sticky-thing-3 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-4 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-4 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-5 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-5 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-6 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-6 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-7 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-7 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-8 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-8 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-9 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-9 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-10 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-10 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-11 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-11 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-12 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-12 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-13 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-13 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-14 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-14 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+
+
 
 .step {
     margin: 0 auto 2rem auto;
