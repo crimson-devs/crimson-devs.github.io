@@ -34,7 +34,7 @@ class MapVis {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Title for Map')
+            .text('Shark Attacks WorldWide')
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
