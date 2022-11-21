@@ -1014,3 +1014,6 @@ article {
     padding: 1rem;
     font-size: 1.5rem;
 }
+#map-div{
+    height: 400px;
+}
