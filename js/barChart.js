@@ -3,9 +3,11 @@
 
 class BarChart {
 
-    constructor(parentElement, data) {
+    constructor(parentElement, data, chartTitle) {
         this.parentElement = parentElement;
         this.data = data;
+
+        this.chartTitle = chartTitle;
 
         this.initVis()
     }
@@ -16,7 +18,7 @@ class BarChart {
 
         console.log('here (initVis)')
 
-        vis.margin = {top: 50, right: 50, bottom: 50, left: 80};
+        vis.margin = {top: 50, right: 90, bottom: 90, left: 80};
         vis.width = 800 - vis.margin.left - vis.margin.right;
 //        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 700 - vis.margin.top - vis.margin.bottom;
@@ -43,6 +45,15 @@ class BarChart {
 
         vis.yAxis = d3.axisLeft()
             .scale(vis.yScale);
+
+        // add chart title
+        vis.svg.append('g')
+            .attr('class', 'title bar-chart-title')
+            .append('text')
+            .text(vis.chartTitle)
+            .attr('transform', `translate(${vis.width / 2 + 45}, 20)`)
+            .attr('text-anchor', 'middle');
+
 
 
         // create the axis groups
@@ -126,7 +137,13 @@ class BarChart {
             .duration(500)
             .style('font-size', '15px')
             .style('color', 'white')
-            .call(d3.axisBottom((vis.xScale)));
+            .call(d3.axisBottom((vis.xScale)))
+            .selectAll('text')
+            .attr('y', 10)
+            .attr('x', -35)
+            .attr('dy', '.35em')
+            .attr('transform', 'rotate(-30)')
+        ;
 
         vis.yAxisGroup
             .transition()

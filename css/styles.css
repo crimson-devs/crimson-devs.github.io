@@ -1,6 +1,5 @@
 html{scroll-behavior: smooth}
 
-
 body {
     background-color: white;
     padding: 20px;
@@ -143,6 +142,12 @@ body {
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
+}
+
+.bar-chart-title {
+    font-size: 20px;
+    font-weight: 600;
+    fill: white;
 }
 
 #shark-population-text-1 {
