@@ -54,6 +54,10 @@ class BarChart {
             .attr('transform', `translate(${vis.width / 2 + 45}, 20)`)
             .attr('text-anchor', 'middle');
 
+        // tooltip
+        vis.tooltip = d3.select('body').append('div')
+            .attr('class', 'tooltip')
+            .attr('id', 'barChartTooltip');
 
 
         // create the axis groups
@@ -120,6 +124,40 @@ class BarChart {
             .enter()
             .append('rect')
             .attr('class', 'bar')
+            .on('mouseover', function(event, d) {
+                d3.select(this)
+                    .attr('stroke-width', '2px')
+                    .attr('stroke', 'grey')
+                    .attr('fill', '#c95151')
+
+                vis.tooltip
+                    .style('opacity', 1)
+                    .style('left', event.pageX + 20 + 'px')
+                    .style('top', event.pageY + 'px')
+                    .html(`
+                    <div style='border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px'>
+                    <h3>${d.activity}</h3>
+                    <h4> ${d.value.toLocaleString()} </h4>
+                    </div>
+                                        
+                    `)
+
+            })
+            .on('mouseout', function(event, d) {
+                d3.select(this)
+                    .attr('stroke-width', 1)
+                    .attr('stroke', 'grey')
+                    .attr('fill', function(d) {
+                        return 'white'
+                    })
+
+                vis.tooltip
+                    .style('opacity', 0)
+                    .style('left', 0)
+                    .style('top', 0)
+                    .html(``);
+
+            })
             .merge(vis.bars)
             .transition()
             .duration(500)
