@@ -206,7 +206,28 @@
                     <div class="row step justify-content-center">
                             <div id="line-plot-div" class="col-12 border">
                                 <!-- placeholder for line plot (Karim Serraj) -->
-                                Line plot goes here (owner: Karim Serraj)
+
+                                <!-- @Karim, we need to get rid of this code because it doesn't really make sense -->
+                                <svg height="300" width="1000">
+
+                                    <text x="75" y="15" fill="black" >Heart Disease</text>
+                                    <circle cx="120" cy="150" r="100" fill="#ff0000";/>
+
+                                    <text x="280" y="15" fill="black" >Cancer</text>
+                                    <circle cx="310" cy="150" r="75" fill="#0000ff";/>
+
+                                    <text x="430" y="15" fill="black" >Stroke</text>
+                                    <circle cx="450" cy="150" r="50" fill="#ffff00";/>
+
+                                    <text x="520" y="15" fill="black" >Covid-19</text>
+                                    <circle cx="550" cy="150" r="25" fill="#00FF00";/>
+
+                                    <text x="590" y="15" fill="black" >Shark Bite</text>
+                                    <circle cx="620" cy="150" r="5" fill="#008080";/>
+
+                                </svg>
+
+
                             </div>
                     </div>
 
@@ -640,6 +661,12 @@
 <!--  D3  -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    <!-- for the Choropleth -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+
 <!-- JS for Easy Scroll Dots -->
     <script type="text/javascript" src="js/easyScrollDots.min.js"></script>
 
@@ -653,6 +680,7 @@
 <!--  Self JavaScript  -->
     <script src="js/barChart.js"></script>
     <script src="js/lineChart.js"></script>
+    <script src="js/choropleth.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countUp.js"></script>
 

@@ -27,8 +27,6 @@ function createVis(data) {
     let geoData = data[5]
     let sharksData = data[3]
 
-//    let lollipopData = data[2]
-
     console.log(data)
 
     // Instantiate the visualizations
