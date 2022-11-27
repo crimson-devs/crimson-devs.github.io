@@ -73,19 +73,21 @@ class BarChart {
 
         // vertical axis
         vis.svg.append('text')
-            .attr('x', -55)
-            .attr('y', -10)
+            .attr('x', -65)
+            .attr('y', -20)
             .text('Occurrences')
+            .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', 'white');
+            .style('fill', '#456983');
 
         // horizontal axis
         vis.svg.append('text')
-            .attr('x', vis.width - 28)
-            .attr('y', vis.height + 40)
+            .attr('x', vis.width - 35)
+            .attr('y', vis.height + 50)
             .text('Activity')
+            .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', 'white');
+            .style('fill', '#456983');
 
         this.wrangleData()
 
@@ -146,9 +148,9 @@ class BarChart {
             .on('mouseout', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', 1)
-                    .attr('stroke', 'grey')
+                    .attr('stroke', '#456983')
                     .attr('fill', function(d) {
-                        return 'white'
+                        return '#456983'
                     })
 
                 vis.tooltip
@@ -165,7 +167,7 @@ class BarChart {
             .attr('y', d => vis.yScale(d.value) )
             .attr('width', vis.xScale.bandwidth() )
             .attr('height', function(d) { return vis.height - vis.yScale(d.value); })
-            .attr('fill', 'white')
+            .attr('fill', '#456983')
 //            .attr('stroke', 'grey');
 
 
@@ -174,7 +176,7 @@ class BarChart {
             .transition()
             .duration(500)
             .style('font-size', '15px')
-            .style('color', 'white')
+            .style('color', '#456983')
             .call(d3.axisBottom((vis.xScale)))
             .selectAll('text')
             .attr('y', 10)
@@ -187,7 +189,7 @@ class BarChart {
             .transition()
             .duration(500)
             .style('font-size', '15px')
-            .style('color', 'white')
+            .style('color', '#456983')
             .call(d3.axisLeft(vis.yScale));
 
 

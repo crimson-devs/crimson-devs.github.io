@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- CSS for Easy Scroll Dots -->
-    <link rel="stylesheet" type="text/css" href="css/easyScrollDots.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/easyScrollDots.css" />
 
     <title>Come on in, the water's fine!</title>
 
@@ -52,7 +52,7 @@
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="nj-incident-text-2" class="col-12 border">
-                                    Since then, the media and popular culture have unjustly characterized sharks as predators with an insatiable appetite for human flesh.
+                                    Since then, the media and popular culture have unjustly characterized sharks as "predators" with an insatiable appetite for human flesh.
                                 </div>
                         </div>
 
@@ -144,10 +144,12 @@
             </section>
 
 
+            <div data-scroll-indicator-title="Shark Bite Statistics">
+
             <section id="scrolly-4">
                 <article>
 
-                    <div data-scroll-indicator-title="Shark Bite Statistics">
+
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="shark-bites-misconception-text-1" class="col-12 border">
@@ -163,10 +165,24 @@
 
                         <!-- shark bites counter (see text in countUp.js file) -->
                         <div class="row step justify-content-center" data-step="about 70">
-                                <div id="shark-bites-counter" class="col-12 border">
+                                <div id="shark-bites-counter-FOO" class="col-12 border">
                                     0
                                 </div>
                         </div>
+
+
+
+                </article>
+
+                <div id="shark-bites-counter" class="sticky-thing-4">
+                    <p>foo</p>
+                </div>
+
+            </section>
+
+
+            <section id="scrolly-15">
+                <article>
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="human-fatalities-text-1" class="col-12 border">
@@ -176,7 +192,7 @@
 
                         <!-- human fatalities counter (see text in countUp.js file) -->
                         <div class="row step justify-content-center" data-step="Fewer than 12 fatalities">
-                                <div id="human-fatalities-counter" class="col-12 border">
+                                <div id="human-fatalities-counter-FOO" class="col-12 border">
                                     0
                                 </div>
                         </div>
@@ -187,15 +203,19 @@
                                 </div>
                         </div>
 
-                    </div>
 
-                </article>
 
-                <div class="sticky-thing-4">
-                    <p>foo</p>
-                </div>
+            </article>
+
+            <div id="human-fatalities-counter" class="sticky-thing-15">
+                <p>foo</p>
+            </div>
 
             </section>
+
+            </div>
+
+
 
 
             <section id="scrolly-5">
@@ -234,7 +254,7 @@
 
                     <div class="row step justify-content-center" data-step="">
                             <div id="line-plot-text-2" class="col-12 border">
-                                The data confirms that the media far overstates the prevalence of shark encounters.
+                                The data confirms that the media far overstates the prevalence of shark bites.
                             </div>
                     </div>
 
@@ -258,14 +278,14 @@
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="countries-text-1" class="col-12 border">
-                                    The vast majority of the recorded shark encounters have occurred in the <strong>United States</strong>, <strong>Australia</strong>, and <strong>South Africa</strong>.
+                                    The vast majority of the recorded shark bites have occurred in the <strong>United States</strong>, <strong>Australia</strong>, and <strong>South Africa</strong>.
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="map-div" class="col-8 border">
                                     <!-- placeholder for choropleth -->
-                                    Choropleth goes here (owner: M.J. Mehdi)
+                                    Foo
                                 </div>
                         </div>
 
@@ -275,7 +295,7 @@
                 </article>
 
                 <div class="sticky-thing-6">
-                    <p>foo</p>
+                    <p>Choropleth here</p>
                 </div>
 
             </section>
@@ -288,19 +308,19 @@
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="activities-text-1" class="col-12 border">
-                                    What were people doing when they encountered a shark?
+                                    What were people doing when they were bitten by a shark?
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center">
-                                <div id="activities-bar-chart" class="col-12 border">
-                                    <!-- activities bar plot goes here (implemented on 12-November-2022 by Ryan Abbate)-->
+                                <div id="activities-bar-chart-FOO-BAR" class="col-12 border">
+                                    <!-- activities bar plot goes here (implemented on 12-November-2022 by Ryan Abbate) -->
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
                             <div id="activities-text-2" class="col-12 border">
-                                More than <strong>half</strong> of all people bitten by a shark were swimming or surfing.
+                                More than <strong>1/2</strong> of all people bitten by a shark were swimming or surfing.
                             </div>
                         </div>
 
@@ -309,48 +329,154 @@
 
                 </article>
 
-                <div class="sticky-thing-7">
-                    <p>foo</p>
+                <div id="activities-bar-chart" class="sticky-thing-7">
+                    <p></p>
                 </div>
 
             </section>
 
 
-            <section id="scrolly-8">
+
+            <div data-scroll-indicator-title="Shark Species">
+
+            <section id="scrolly-8a">
                 <article>
 
-                    <div data-scroll-indicator-title="Shark Species">
+
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="species-text-1" class="col-12 border">
-                                    There are more than <strong>500</strong> species of sharks.  Only about <strong>20</strong> species have even bitten a human.
+                                    There are more than <strong>500</strong> species of sharks.  Only about <strong>20</strong> species have ever bitten a human.
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="species-text-2" class="col-12 border">
-                                    There are <strong>3</strong> species that account for more than <strong>half</strong> of the total number of bites and nearly <strong>90%</strong> of the total number of fatalities.
+                                    There are <strong>3</strong> species that account for more than <strong>50%</strong> of the total number of bites and nearly <strong>90%</strong> of the total number of human fatalities.
                                 </div>
                         </div>
-
 
                         <div class="row step justify-content-center" data-step="White Shark">
-                                <div id="shark-photos-white" class="col-12 border">
-                                    <img src="./assets/white-shark.jpg" alt="Photo of a white shark.">
+                                <div id="white-shark-text-1" class="col-12">
+                                    White Shark
+                                </div>
+                                <div id="white-shark-text-2" class="col-12">
+                                    Carcharodon carcharias
+                                </div>
+                                <div id="white-shark-text-3" class="col-12">
+                                    APPEARANCE
+                                </div>
+                                <div id="white-shark-text-4" class="col-12">
+                                    A large shark with a heavy spindle-shaped body, conical snout, caudal keel and a lunate caudal fin.
+                                </div>
+                               <div id="white-shark-text-5" class="col-12">
+                                    BEHAVIOR
+                                </div>
+                                <div id="white-shark-text-6" class="col-12">
+                                    A super-predator, the most formidable of all species of sharks.
+                                </div>
+                                <div id="white-shark-text-7" class="col-12">
+                                    DISPOSITION
+                                </div>
+                                <div id="white-shark-text-8" class="col-12">
+                                    The white shark is intelligent, curious, and learns by experience.  It often uses its teeth to inspect an unfamiliar object.
                                 </div>
                         </div>
 
-                        <div class="row step justify-content-center" data-step="Tiger Shark">
-                                <div id="shark-photos-tiger" class="col-12 border">
-                                    <img src="./assets/tiger-shark.jpg" alt="Photo of a tiger shark.">
-                                </div>
-                        </div>
+                </article>
 
-                        <div class="row step justify-content-center" data-step="Bull Shark">
-                                <div id="shark-photos-bull" class="col-12 border">
-                                    <img src="./assets/bull-shark.jpg" alt="Photo of a bull shark.">
-                                </div>
+                <div class="sticky-thing-8a">
+                    <div>
+                        <img src="./assets/white-shark.jpg" alt="Photo of a white shark.">
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="scrolly-8b">
+                <article>
+
+                    <div class="row step justify-content-center" data-step="Tiger Shark">
+                        <div id="tiger-shark-text-1" class="col-12">
+                            Tiger Shark
                         </div>
+                        <div id="tiger-shark-text-2" class="col-12">
+                            Galeocerdo cuvier
+                        </div>
+                        <div id="tiger-shark-text-3" class="col-12">
+                            APPEARANCE
+                        </div>
+                        <div id="tiger-shark-text-4" class="col-12">
+                            A large shark with an extremely wide, blunt snout and a caudal keel.
+                        </div>
+                        <div id="tiger-shark-text-5" class="col-12">
+                            BEHAVIOR
+                        </div>
+                        <div id="tiger-shark-text-6" class="col-12">
+                            A nocturnal species that is usually solitary, but may be found in small groups of up to 6 individuals.
+                        </div>
+                        <div id="tiger-shark-text-7" class="col-12">
+                            DISPOSITION
+                        </div>
+                        <div id="tiger-shark-text-8" class="col-12">
+                            The tiger shark is inquisitive and may approach submerged divers and circle slowly and at close range.  Despite its nonchalance, the tiger shark may bite a human while remaining cool and casual.
+                        </div>
+                    </div>
+
+                </article>
+
+                <div class="sticky-thing-8b">
+                    <div>
+                        <img src="./assets/tiger-shark.jpg" alt="Photo of a tiger shark.">
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section id="scrolly-8c">
+                <article>
+
+                    <div class="row step justify-content-center" data-step="Tiger Shark">
+                        <div id="bull-shark-text-1" class="col-12">
+                            Bull Shark
+                        </div>
+                        <div id="bull-shark-text-2" class="col-12">
+                            Carcharhinus leucas
+                        </div>
+                        <div id="bull-shark-text-3" class="col-12">
+                            APPEARANCE
+                        </div>
+                        <div id="bull-shark-text-4" class="col-12">
+                            A large, stocky, heavy-bodied gray shark with a short bluntly-rounded snout.
+                        </div>
+                        <div id="bull-shark-text-5" class="col-12">
+                            BEHAVIOR
+                        </div>
+                        <div id="bull-shark-text-6" class="col-12">
+                            Rarely observed at the surface, with most seen cruising over the reef.
+                        </div>
+                        <div id="bull-shark-text-7" class="col-12">
+                            DISPOSITION
+                        </div>
+                        <div id="bull-shark-text-8" class="col-12">
+                            The bull shark is aggressive and moves through the water like a seasoned warrior.  Bull sharks often take multiple bites accompanied by head-shaking, which results in injuries that are far more difficult to repair than those caused by white sharks.
+                        </div>
+                    </div>
+
+                </article>
+
+                <div class="sticky-thing-8c">
+                    <div>
+                        <img src="./assets/bull-shark.jpg" alt="Photo of a bull shark.">
+                    </div>
+                </div>
+
+            </section>
+
+
 
 
                         <div class="row step justify-content-center">
@@ -359,58 +485,98 @@
                                 </div>
                         </div>
 
-                    </div>
+
+            </div>
 
 
-                </article>
-
-                <div class="sticky-thing-8">
-                    <p>foo</p>
-                </div>
-
-            </section>
 
 
-            <section id="scrolly-9">
+            <div data-scroll-indicator-title="Shark Population Declines">
+
+            <section id="scrolly-9a">
                 <article>
-
-                    <div data-scroll-indicator-title="Shark Population Declines">
 
                     <!-- shark fatalities counter (see text in countUp.js file) -->
                         <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-fatalities-counter-annually" class="col-12 border">
-                                    0
+                                <div id="shark-fatalities-text-1" class="col-12 border">
+                                    By contrast, humans are responsible for an alarming number of shark deaths each year.
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="1">
                                 <div id="shark-fatalities-hourly" class="col-12 border">
-                                    That's more than <strong>11,000</strong> killed every hour... or <strong>1 shark</strong> killed every <strong><i>3 seconds</i></strong>.
+                                    Humans kill <strong>11,000</strong> sharks every <i>hour</i>.
                                 </div>
                         </div>
-
-                        <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-population-text-1" class="col-12 border">
-                                    Since the 1970s, shark populations have declined by a staggering 70%.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-population-text-2" class="col-12 border">
-                                    More than 1/3 of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
-                                </div>
-                        </div>
-
-                    </div>
-
 
                 </article>
 
-                <div class="sticky-thing-9">
+                <div id="shark-fatalities-counter-annually" class="sticky-thing-9a">
                     <p>foo</p>
                 </div>
 
             </section>
+
+            <section id="scrolly-9b">
+                <article>
+
+                        <div class="row step justify-content-center" data-step=2">
+                            <div id="shark-fatalities-seconds" class="col-12 border">
+                                That's <strong>1</strong> shark every <strong><i>3 seconds</i></strong>.
+                            </div>
+                        </div>
+
+                </article>
+
+                <div class="sticky-thing-9b">
+
+                    <br>
+
+                    <div id="blood-drip">
+                        <div style="margin: 175px auto" class="drop"></div>
+                        <div style="margin: 175px auto" class="wave"></div>
+                    </div>
+
+<!--
+                    <div>
+                        <img class="blink" src="./assets/white-shark.jpg" alt="Photo of a white shark.">
+                    </div>
+-->
+
+                </div>
+
+            </section>
+
+
+
+
+            </div>
+
+
+            <section id="scrolly-9c">
+                <article>
+
+            <div class="row step justify-content-center" data-step="1">
+                <div id="shark-population-text-1" class="col-12 border">
+                    Since the 1970s, shark populations have declined by a staggering 70%.
+                </div>
+            </div>
+
+            <div class="row step justify-content-center" data-step="1">
+                <div id="shark-population-text-2" class="col-12 border">
+                    More than 1/3 of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
+                </div>
+            </div>
+
+                </article>
+
+                <div id="shark-population-line-plot" class="sticky-thing-9c">
+                    <p>Line Plot here</p>
+                </div>
+
+            </section>
+
+
 
 
             <section id="scrolly-10">
@@ -460,7 +626,7 @@
                 </article>
 
                 <div class="sticky-thing-10">
-                    <p>foo</p>
+                    <p></p>
                 </div>
 
             </section>
@@ -491,7 +657,7 @@
 
                     <div class="row step justify-content-center">
                             <div id="ocean-reliance-text-1" class="col-12 border">
-                                Either directly or indirectly, we all rely on the oceans.  <strong>Billions</strong> of people rely on the oceans for seafood, while more than <strong>200 million</strong> people rely on the oceans for employment.
+                                Either directly or indirectly, we all rely on the oceans.  <strong>Billions</strong> of people rely on the oceans for food, while more than <strong>200 million</strong> people rely on the oceans for employment.
                             </div>
                     </div>
 
@@ -563,11 +729,15 @@
                                         </li>
 
                                     </ul>
-                                    <li>Do not eat shark fin soup (and discourage businesses from selling it).</li>
-                                    <li>Do not consume shark meat.</li>
-                                    <li>Do not purchase souvenirs or pharmaceuticals made from shark body parts.</li>
+                                    <li>Do not consume shark products</li>
+                                    <ul>
+                                        <li>Shark Fin Soup</li>
+                                        <li>Shark Meat</li>
+                                        <li>Pharmaceuticals</li>
+                                        <li>Souvenirs</li>
+                                    </ul>
                                     <li>Further educate yourself and raise awareness about the plight of sharks.</li>
-                                    <li>Refrain from referring to encounters between sharks and humans as "attacks".  Doing so only perpetuates the myth!</li>
+                                    <li>Refrain from referring to shark bites as "attacks".  Doing so only perpetuates the myth!</li>
                                 </ul>
                             </div>
                         </div>
@@ -587,25 +757,39 @@
 
                     <div data-scroll-indicator-title="Our Team">
 
-                        <div class="row step justify-content-center">
+                        <div class="row justify-content-center">
                                 <div id="our-team-text" class="col-12 border">
                                     Our Team
                                 </div>
                         </div>
 
-                        <div class="row step justify-content-center">
+                        <div class="row justify-content-center">
 
-                                <div id="ryan" class="col-4 border">
+                                <div id="ryan-name" class="col-4 border">
                                     Ryan Abbate
                                 </div>
-                                <div id="karim" class="col-4 border">
+                                <div id="karim-name" class="col-4 border">
                                     Karim Serraj
                                 </div>
-                                <div id="mj" class="col-4 border">
+                                <div id="mj-name" class="col-4 border">
                                     M.J. Mehdi
                                 </div>
-
                         </div>
+
+                        <div class="row justify-content-center">
+
+                            <div id="ryan-text" class="col-4 border">
+                                Candidate for ALM (Data Science)
+                            </div>
+                            <div id="karim-text" class="col-4 border">
+                                Candidate for ALM (Data Science)
+                            </div>
+                            <div id="mj-text" class="col-4 border">
+                                Candidate for ALM (Software Eng.)
+                            </div>
+                        </div>
+
+
 
                     </div>
 
@@ -637,6 +821,9 @@
                                         </li>
                                         <li>
                                             Global catches, exploitation rates, and rebuilding options for sharks. <i>Marine Policy</i>, 194-204.  doi:<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.marpol.2012.12.034">10.1016/j.marpol.2012.12.034</a>
+                                        </li>
+                                        <li>
+                                            Collapse and Conservation of Shark Populations in the Northwest Atlantic. <i>Science</i>, 389-391.  doi:<a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1126/science.1079777">10.1126/science.1079777</a>
                                         </li>
                                     </ol>
                                 </div>
@@ -739,11 +926,23 @@
     let scrolly_7 = main.querySelector('#scrolly-7');
     let sticky_7 = scrolly_7.querySelector('.sticky-thing-7');
 
-    let scrolly_8 = main.querySelector('#scrolly-8');
-    let sticky_8 = scrolly_8.querySelector('.sticky-thing-8');
+    let scrolly_8a = main.querySelector('#scrolly-8a');
+    let sticky_8a = scrolly_8a.querySelector('.sticky-thing-8a');
 
-    let scrolly_9 = main.querySelector('#scrolly-9');
-    let sticky_9 = scrolly_9.querySelector('.sticky-thing-9');
+    let scrolly_8b = main.querySelector('#scrolly-8b');
+    let sticky_8b = scrolly_8b.querySelector('.sticky-thing-8b');
+
+    let scrolly_8c = main.querySelector('#scrolly-8c');
+    let sticky_8c = scrolly_8c.querySelector('.sticky-thing-8c');
+
+    let scrolly_9a = main.querySelector('#scrolly-9a');
+    let sticky_9a = scrolly_9a.querySelector('.sticky-thing-9a');
+
+    let scrolly_9b = main.querySelector('#scrolly-9b');
+    let sticky_9b = scrolly_9a.querySelector('.sticky-thing-9b');
+
+    let scrolly_9c = main.querySelector('#scrolly-9c');
+    let sticky_9c = scrolly_9a.querySelector('.sticky-thing-9c');
 
     let scrolly_10 = main.querySelector('#scrolly-10');
     let sticky_10 = scrolly_10.querySelector('.sticky-thing-10');
@@ -758,7 +957,10 @@
     let sticky_13 = scrolly_13.querySelector('.sticky-thing-13');
 
     let scrolly_14 = main.querySelector('#scrolly-14');
-    let sticky_14 = scrolly_13.querySelector('.sticky-thing-14');
+    let sticky_14 = scrolly_14.querySelector('.sticky-thing-14');
+
+    let scrolly_15 = main.querySelector('#scrolly-15');
+    let sticky_15 = scrolly_15.querySelector('.sticky-thing-15');
 
 
 
@@ -783,11 +985,23 @@
     let article_7 = scrolly_7.querySelector('article');
     let steps_7 = article_7.querySelectorAll('.step');
 
-    let article_8 = scrolly_8.querySelector('article');
-    let steps_8 = article_8.querySelectorAll('.step');
+    let article_8a = scrolly_8a.querySelector('article');
+    let steps_8a = article_8a.querySelectorAll('.step');
 
-    let article_9 = scrolly_9.querySelector('article');
-    let steps_9 = article_9.querySelectorAll('.step');
+    let article_8b = scrolly_8b.querySelector('article');
+    let steps_8b = article_8b.querySelectorAll('.step');
+
+    let article_8c = scrolly_8c.querySelector('article');
+    let steps_8c = article_8c.querySelectorAll('.step');
+
+    let article_9a = scrolly_9a.querySelector('article');
+    let steps_9a = article_9a.querySelectorAll('.step');
+
+    let article_9b = scrolly_9b.querySelector('article');
+    let steps_9b = article_9b.querySelectorAll('.step');
+
+    let article_9c = scrolly_9c.querySelector('article');
+    let steps_9c = article_9c.querySelectorAll('.step');
 
     let article_10 = scrolly_10.querySelector('article');
     let steps_10 = article_10.querySelectorAll('.step');
@@ -804,6 +1018,9 @@
     let article_14 = scrolly_14.querySelector('article');
     let steps_14 = article_14.querySelectorAll('.step');
 
+    let article_15 = scrolly_15.querySelector('article');
+    let steps_15 = article_15.querySelectorAll('.step');
+
 
     // Initialize the Scrollama
     let scroller_1 = scrollama();
@@ -813,13 +1030,18 @@
     let scroller_5 = scrollama();
     let scroller_6 = scrollama();
     let scroller_7 = scrollama();
-    let scroller_8 = scrollama();
-    let scroller_9 = scrollama();
+    let scroller_8a = scrollama();
+    let scroller_8b = scrollama();
+    let scroller_8c = scrollama();
+    let scroller_9a = scrollama();
+    let scroller_9b = scrollama();
+    let scroller_9c = scrollama();
     let scroller_10 = scrollama();
     let scroller_11 = scrollama();
     let scroller_12 = scrollama();
     let scroller_13 = scrollama();
     let scroller_14 = scrollama();
+    let scroller_15 = scrollama();
 
     // Scrollama event handlers
     function handleStepEnter(response) {
@@ -850,10 +1072,22 @@
         steps_7.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
-        steps_8.forEach(step => step.classList.remove('is-active'));
+        steps_8a.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
-        steps_9.forEach(step => step.classList.remove('is-active'));
+        steps_8b.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        steps_8c.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        steps_9a.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        steps_9b.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        steps_9c.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
         steps_10.forEach(step => step.classList.remove('is-active'));
@@ -871,6 +1105,9 @@
         steps_14.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
+        steps_15.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
 
         // update graphic based on step
         sticky_1.querySelector('p').innerText = el.dataset.step;
@@ -880,13 +1117,18 @@
         sticky_5.querySelector('p').innerText = el.dataset.step;
         sticky_6.querySelector('p').innerText = el.dataset.step;
         sticky_7.querySelector('p').innerText = el.dataset.step;
-        sticky_8.querySelector('p').innerText = el.dataset.step;
-        sticky_9.querySelector('p').innerText = el.dataset.step;
+        sticky_8a.querySelector('p').innerText = el.dataset.step;
+        sticky_8b.querySelector('p').innerText = el.dataset.step;
+        sticky_8c.querySelector('p').innerText = el.dataset.step;
+        sticky_9a.querySelector('p').innerText = el.dataset.step;
+        sticky_9b.querySelector('p').innerText = el.dataset.step;
+        sticky_9c.querySelector('p').innerText = el.dataset.step;
         sticky_10.querySelector('p').innerText = el.dataset.step;
         sticky_11.querySelector('p').innerText = el.dataset.step;
         sticky_12.querySelector('p').innerText = el.dataset.step;
         sticky_13.querySelector('p').innerText = el.dataset.step;
         sticky_14.querySelector('p').innerText = el.dataset.step;
+        sticky_15.querySelector('p').innerText = el.dataset.step;
 
 
     }
@@ -931,7 +1173,8 @@
                 offset: 0.33,
                 debug: false
             })
-            .onStepEnter(handleStepEnter);
+            .onStepEnter(handleStepEnter)
+            .onStepEnter(sharkBitesCounter);
 
         // set up resize event
         window.addEventListener('resize', scroller_4.resize);
@@ -969,27 +1212,71 @@
         // set up resize event
         window.addEventListener('resize', scroller_7.resize);
 
-        scroller_8
+        scroller_8a
             .setup({
-                step: '#scrolly-8 article .step',
+                step: '#scrolly-8a article .step',
                 offset: 0.33,
                 debug: false
             })
             .onStepEnter(handleStepEnter);
 
         // set up resize event
-        window.addEventListener('resize', scroller_8.resize);
+        window.addEventListener('resize', scroller_8a.resize);
 
-        scroller_9
+        scroller_8b
             .setup({
-                step: '#scrolly-9 article .step',
+                step: '#scrolly-8b article .step',
                 offset: 0.33,
                 debug: false
             })
             .onStepEnter(handleStepEnter);
 
         // set up resize event
-        window.addEventListener('resize', scroller_9.resize);
+        window.addEventListener('resize', scroller_8b.resize);
+
+        scroller_8c
+            .setup({
+                step: '#scrolly-8c article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_8c.resize);
+
+        scroller_9a
+            .setup({
+                step: '#scrolly-9a article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_9a.resize);
+
+        scroller_9b
+            .setup({
+                step: '#scrolly-9b article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_9b.resize);
+
+        scroller_9c
+            .setup({
+                step: '#scrolly-9c article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_9c.resize);
 
         scroller_10
             .setup({
@@ -1048,6 +1335,17 @@
 
         // set up resize event
         window.addEventListener('resize', scroller_14.resize);
+
+        scroller_15
+            .setup({
+                step: '#scrolly-15 article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_15.resize);
 
 
 

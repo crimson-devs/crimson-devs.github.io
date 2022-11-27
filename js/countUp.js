@@ -1,28 +1,28 @@
 // Counter for average annual number of shark bites
 const sharkBitesCounter = new countUp.CountUp('shark-bites-counter', 70,
     { enableScrollSpy: true,
-        duration: 20,
-        delay: 3,
+        duration: 10,
+        delay: 5,
         useEasing: true,
-        scrollSpyDelay: 3,
+        scrollSpyDelay: 5000,
         prefix: '',
-        suffix: '',
-        scrollSpyOnce: true
+        suffix: ' bites',
+        scrollSpyOnce: false
     }
 )
-sharkBitesCounter
+//sharkBitesCounter
 
 
 // Counter for average annual number of human fatalities
 const humanFatalitiesCounter = new countUp.CountUp('human-fatalities-counter', 12,
                                                         { enableScrollSpy: true,
-                                                          duration: 5,
-                                                          delay: 3,
+                                                          duration: 10,
+                                                          delay: 15,
                                                           useEasing: true,
-                                                          scrollSpyDelay: 3,
+                                                          scrollSpyDelay: 8000,
                                                           prefix: '',
-                                                          suffix: '',
-//                                                          scrollSpyOnce: true
+                                                          suffix: ' human fatalities',
+                                                          scrollSpyOnce: false
                                                         }
                                                    )
 humanFatalitiesCounter
@@ -31,11 +31,12 @@ humanFatalitiesCounter
 // Counter for average annual number of shark fatalities
 const sharkFatalitiesCounter = new countUp.CountUp('shark-fatalities-counter-annually', 100,
                                                         { enableScrollSpy: true,
-                                                          duration: 15,
+                                                          duration: 10,
+                                                          delay: 3,
                                                           useEasing: true,
-                                                          scrollSpyDelay: 3,
-                                                          prefix: 'Each year, humans kill an estimated ',
-                                                          suffix: ' <strong><i>million</i></strong> sharks.',
+                                                          scrollSpyDelay: 8000,
+                                                          prefix: '',
+                                                          suffix: ' million',
                                                           scrollSpyOnce: true
                                                         }
                                                    )

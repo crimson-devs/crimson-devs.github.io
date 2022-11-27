@@ -30,7 +30,7 @@ function createVis(data) {
     console.log(data)
 
     // Instantiate the visualizations
-    barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they encountered a shark?');
+    barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they were bitten by a shark?');
     lineChart = new LineChart('line-plot-div', lineChartData);
 
     myMapVis = new MapVis('map-div', sharksData, geoData)

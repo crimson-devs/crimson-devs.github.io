@@ -1,4 +1,30 @@
+a {
+    color: white;
+    text-decoration: underline white;
+
+}
+
+a:hover {
+    color: white;
+}
+
 html{scroll-behavior: smooth}
+
+.blink {
+    animation: blink 3s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 body {
     background-color: white;
@@ -145,6 +171,204 @@ body {
     padding: 30px;
 }
 
+#white-shark-text-1 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#white-shark-text-2 {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#white-shark-text-3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#white-shark-text-4 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#white-shark-text-5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#white-shark-text-6 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#white-shark-text-7 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#white-shark-text-8 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#tiger-shark-text-1 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-2 {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-4 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-6 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-7 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#tiger-shark-text-8 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#bull-shark-text-1 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#bull-shark-text-2 {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#bull-shark-text-3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#bull-shark-text-4 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#bull-shark-text-5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#bull-shark-text-6 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+}
+
+#bull-shark-text-7 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#bull-shark-text-8 {
+    color: white;
+    font-size: 20px;
+    font-family: Georgia;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
 #activities-text-1 {
     color: white;
     font-size: 50px;
@@ -162,7 +386,7 @@ body {
 .bar-chart-title {
     font-size: 20px;
     font-weight: 600;
-    fill: white;
+    fill: #456983;
 }
 
 #shark-population-text-1 {
@@ -298,6 +522,13 @@ body {
 }
 
 #shark-fatalities-counter-annually {
+    color: crimson;
+    font-size: 100px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#shark-fatalities-text-1 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
@@ -305,6 +536,13 @@ body {
 }
 
 #shark-fatalities-hourly {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#shark-fatalities-seconds {
     color: white;
     font-size: 50px;
     font-family: Georgia;
@@ -319,31 +557,61 @@ body {
 }
 
 #our-team-text {
-    color: white;
-    font-size: 50px;
-    font-family: Georgia;
-    padding-top: 100px;
-}
-
-#ryan {
-    color: white;
+    color: #456983;
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
 }
 
-#karim {
-    color: white;
-    font-size: 50px;
+#ryan-name {
+    color: #456983;
+    font-size: 30px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#karim-name {
+    color: #456983;
+    font-size: 30px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#mj-name {
+    color: #456983;
+    font-size: 30px;
+    font-family: Georgia;
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+
+#ryan-text {
+    color: #456983;
+    font-size: 20px;
     font-family: Georgia;
     padding: 30px;
 }
 
-#mj {
-    color: white;
-    font-size: 50px;
+#karim-text {
+    color: #456983;
+    font-size: 20px;
     font-family: Georgia;
     padding: 30px;
+}
+
+#mj-text {
+    color: #456983;
+    font-size: 20px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+
+#map-div {
+    height: 400px;
 }
 
 #outro {
@@ -438,7 +706,8 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
+    background-color: white;
     padding: 1rem;
 }
 
@@ -453,7 +722,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -538,7 +807,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     flex: 1;
 }
 
-#scrolly-8 {
+#scrolly-8a {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -547,13 +816,13 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     padding: 1rem;
 }
 
-#scrolly-8 > * {
+#scrolly-8a > * {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
 
-#scrolly-9 {
+#scrolly-8b {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,7 +831,67 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     padding: 1rem;
 }
 
-#scrolly-9 > * {
+#scrolly-8b > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-8c {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-8c > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-9a {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-9a > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-9b {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-9b > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-9c {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
+
+#scrolly-9c > * {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -643,7 +972,20 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     flex: 1;
 }
 
+#scrolly-15 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 1rem;
+}
 
+#scrolly-15 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
 
 
 
@@ -651,30 +993,6 @@ article {
     position: relative;
     padding: 0 1rem;
     max-width: 50rem;
-}
-
-.sticky-thing-2 {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    margin: 0;
-    background-color: #8a8a8a;
-    z-index: 0;
-    top: 12.5vh;
-    height: 75vh;
-    /* Center everything inside */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/assets/jaws-image.jpg');
-    background-size: cover;
-}
-
-.sticky-thing-2 p {
-    padding: 1rem;
-    font-size: 8rem;
-    font-weight: 900;
-    color: #fff;
 }
 
 .sticky-thing-1 {
@@ -695,6 +1013,30 @@ article {
 }
 
 .sticky-thing-1 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-2 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/jaws-image.jpg');
+    background-size: cover;
+}
+
+.sticky-thing-2 p {
     padding: 1rem;
     font-size: 8rem;
     font-weight: 900;
@@ -733,7 +1075,7 @@ article {
     background-color: #8a8a8a;
     z-index: 0;
     top: 12.5vh;
-    height: 75vh;
+    height: 50vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
@@ -809,7 +1151,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
@@ -821,22 +1163,22 @@ article {
     background-size: cover;
 }
 
-.sticky-thing-8 p {
+.sticky-thing-8a p {
     padding: 1rem;
     font-size: 8rem;
     font-weight: 900;
     color: #fff;
 }
 
-.sticky-thing-8 {
+.sticky-thing-8a {
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
-    height: 75vh;
+    height: 50vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
@@ -845,22 +1187,22 @@ article {
     background-size: cover;
 }
 
-.sticky-thing-9 p {
+.sticky-thing-8b p {
     padding: 1rem;
     font-size: 8rem;
     font-weight: 900;
     color: #fff;
 }
 
-.sticky-thing-9 {
+.sticky-thing-8b {
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
-    height: 75vh;
+    height: 50vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
@@ -868,6 +1210,103 @@ article {
     /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
     background-size: cover;
 }
+
+.sticky-thing-8c p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-8c {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-9a p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-9a {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-9b p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-9b {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('/assets/white-shark.jpg'); */
+    background-size: cover;
+}
+
+.sticky-thing-9c p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-9c {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('/assets/white-shark.jpg'); */
+    background-size: cover;
+}
+
 
 .sticky-thing-10 p {
     padding: 1rem;
@@ -889,7 +1328,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-image: url('/assets/bycatch.jpg');
     background-size: cover;
 }
 
@@ -989,7 +1428,29 @@ article {
     background-size: cover;
 }
 
+.sticky-thing-15 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
 
+.sticky-thing-15 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: #8a8a8a;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
 
 
 .step {
@@ -1014,3 +1475,133 @@ article {
     padding: 1rem;
     font-size: 1.5rem;
 }
+
+
+/* ############### */
+/* Blood animation */
+/* ############### */
+
+
+.drop {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    margin: 0 auto;
+    background: #F00;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-animation-name: drip;
+    -webkit-animation-name: drip;
+    animation-name: drip;
+    -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+    -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+    animation-timing-function: cubic-bezier(1,0,.91,.19);
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.drop:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid rgba(255,0,0,1);
+    top: -22px;
+}
+
+.wave {
+    position: relative;
+    opacity: 0;
+    top: 0;
+    width: 2px;
+    height: 1px;
+    border: #F00 7px solid;
+    -moz-border-radius: 300px / 150px;
+    -webkit-border-radius: 300px / 150px;
+    border-radius: 300px / 150px;
+    -moz-animation-name: ripple;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.wave:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: -5px;
+    left: -5px;
+    width: 2px;
+    height: 1px;
+    border: #F00 5px solid;
+    -moz-border-radius: 300px / 150px;
+    -webkit-border-radius: 300px / 150px;
+    border-radius: 300px / 150px;
+    -moz-animation-name: ripple-2;
+    -webkit-animation-name: ripple-2;
+    animation-name: ripple-2;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+    }
+    to {
+        width: 600px;
+        height: 300px;
+        border-width: 1px;
+        top: -100px;
+        opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        width: 200px;
+        height: 100px;
+        border-width: 1px;
+        top: 100px;
+        left: 200px;
+    }
+}
+
+@keyframes drip {
+    to {
+        top: 190px;
+    }
+}
+
+#blood-drip {
+    margin-top: 50px;
+    width: 100%;
+    height: 75vh;
+}
+
