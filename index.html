@@ -45,26 +45,26 @@
                     <div data-scroll-indicator-title="New Jersey Incidents">
 
                         <div class="row step justify-content-center" data-step="">
-                                <div id="nj-incident-text-1" class="col-12 border">
+                                <div id="nj-incident-text-1" class="col-12">
                                     In July 1916, five people were "attacked" by sharks while swimming along the coast of New Jersey.
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
-                                <div id="nj-incident-text-2" class="col-12 border">
+                                <div id="nj-incident-text-2" class="col-12">
                                     Since then, the media and popular culture have unjustly characterized sharks as "predators" with an insatiable appetite for human flesh.
                                 </div>
                         </div>
 
 
                         <div class="row step justify-content-center" data-step="">
-                                <div id="hook-text-1" class="col-12 border">
+                                <div id="hook-text-1" class="col-12">
                                     But, <i>nothing</i> could be further from the truth.
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
-                                <div id="hook-text-2" class="col-12 border">
+                                <div id="hook-text-2" class="col-12">
                                     Let's redefine the relationship we have with sharks to one based on <strong>scientific data</strong> rather than limited an biased information.
                                 </div>
                         </div>
@@ -130,7 +130,7 @@
                     <div class="row step justify-content-center" data-step="">
                         <div data-scroll-indicator-title="Redefining Our Relationship">
                             <div id="hook-text-3" class="col-12 border">
-                                In the visual story that unfolds, we will show you how changing the way we <i>perceive</i> sharks could change our environment, our economies, and our lives for the better.
+                                In the visual story that unfolds, we'll show you how changing the way we <i>perceive</i> sharks could change our environment, our economies, and our lives for the better.
                             </div>
                         </div>
                     </div>
@@ -159,14 +159,14 @@
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="shark-bites-misconception-text-2" class="col-12 border">
-                                    On a global level, the number is quite small...
+                                    Tens of millions of people work and play in the oceans each year.  Globally, the number of shark bites is actually quite small...
                                 </div>
                         </div>
 
                         <!-- shark bites counter (see text in countUp.js file) -->
                         <div class="row step justify-content-center" data-step="about 70">
                                 <div id="shark-bites-counter-FOO" class="col-12 border">
-                                    0
+
                                 </div>
                         </div>
 
@@ -175,7 +175,7 @@
                 </article>
 
                 <div id="shark-bites-counter" class="sticky-thing-4">
-                    <p>foo</p>
+                    <p>baz</p>
                 </div>
 
             </section>
@@ -193,17 +193,15 @@
                         <!-- human fatalities counter (see text in countUp.js file) -->
                         <div class="row step justify-content-center" data-step="Fewer than 12 fatalities">
                                 <div id="human-fatalities-counter-FOO" class="col-12 border">
-                                    0
+
                                 </div>
                         </div>
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="line-plot-text-1" class="col-12 border">
-                                    But, the media wants us to believe that these shark "attacks" are becoming more prevalent.  Is this true?
+                                    But, the media wants us to believe that shark "attacks" are becoming more prevalent.
                                 </div>
                         </div>
-
-
 
             </article>
 
@@ -215,6 +213,40 @@
 
             </div>
 
+            <section id="scrolly-15a">
+                <article>
+
+                    <div class="row step justify-content-center" data-step="">
+                        <div id="line-plot-text-3" class="col-12 border">
+                            Is this true?  Use the visualization to explore the prevalence of shark bites.
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <div class="row">
+
+                    <div class="row">
+                        <div id="line-plot-user-selection">
+                            <div class="form-group">
+                                <select class="form-control" id="metric-type" onchange="updateMetric()">
+                                    <option value="Unprovoked">Unprovoked Bites</option>
+                                    <option value="Provoked">Provoked Bites</option>
+                                    <option value="Fatalities" selected>Fatalities</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="line-plot-div" class="sticky-thing-15a">
+                        <p></p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
 
 
 
@@ -225,7 +257,7 @@
                     <div data-scroll-indicator-title="Prevalence of Incidents">
 
                     <div class="row step justify-content-center">
-                            <div id="line-plot-div" class="col-12 border">
+                            <div id="area-chart-div" class="col-12 border">
                                 <!-- placeholder for line plot (Karim Serraj) -->
 
                                 <!-- @Karim, we need to get rid of this code because it doesn't really make sense -->
@@ -254,7 +286,7 @@
 
                     <div class="row step justify-content-center" data-step="">
                             <div id="line-plot-text-2" class="col-12 border">
-                                The data confirms that the media far overstates the prevalence of shark bites.
+                                The data confirms that the media vastly overstates the prevalence of shark bites.
                             </div>
                     </div>
 
@@ -939,10 +971,10 @@
     let sticky_9a = scrolly_9a.querySelector('.sticky-thing-9a');
 
     let scrolly_9b = main.querySelector('#scrolly-9b');
-    let sticky_9b = scrolly_9a.querySelector('.sticky-thing-9b');
+    let sticky_9b = scrolly_9b.querySelector('.sticky-thing-9b');
 
     let scrolly_9c = main.querySelector('#scrolly-9c');
-    let sticky_9c = scrolly_9a.querySelector('.sticky-thing-9c');
+    let sticky_9c = scrolly_9c.querySelector('.sticky-thing-9c');
 
     let scrolly_10 = main.querySelector('#scrolly-10');
     let sticky_10 = scrolly_10.querySelector('.sticky-thing-10');
@@ -961,6 +993,9 @@
 
     let scrolly_15 = main.querySelector('#scrolly-15');
     let sticky_15 = scrolly_15.querySelector('.sticky-thing-15');
+
+    let scrolly_15a = main.querySelector('#scrolly-15a');
+    let sticky_15a = scrolly_15a.querySelector('.sticky-thing-15a');
 
 
 
@@ -1021,6 +1056,9 @@
     let article_15 = scrolly_15.querySelector('article');
     let steps_15 = article_15.querySelectorAll('.step');
 
+    let article_15a = scrolly_15a.querySelector('article');
+    let steps_15a = article_15a.querySelectorAll('.step');
+
 
     // Initialize the Scrollama
     let scroller_1 = scrollama();
@@ -1042,6 +1080,7 @@
     let scroller_13 = scrollama();
     let scroller_14 = scrollama();
     let scroller_15 = scrollama();
+    let scroller_15a = scrollama();
 
     // Scrollama event handlers
     function handleStepEnter(response) {
@@ -1108,6 +1147,9 @@
         steps_15.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
+        steps_15a.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
 
         // update graphic based on step
         sticky_1.querySelector('p').innerText = el.dataset.step;
@@ -1129,6 +1171,7 @@
         sticky_13.querySelector('p').innerText = el.dataset.step;
         sticky_14.querySelector('p').innerText = el.dataset.step;
         sticky_15.querySelector('p').innerText = el.dataset.step;
+        sticky_15a.querySelector('p').innerText = el.dataset.step;
 
 
     }
@@ -1346,6 +1389,17 @@
 
         // set up resize event
         window.addEventListener('resize', scroller_15.resize);
+
+        scroller_15a
+            .setup({
+                step: '#scrolly-15a article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_15a.resize);
 
 
 

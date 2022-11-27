@@ -39,6 +39,18 @@ body {
     margin-right: 4rem;
 }
 
+.line {
+    fill: none;
+/*    stroke: #456983; */
+    stroke: crimson;
+    stroke-width: 3px;
+    shape-rendering: crispEdges;
+}
+
+#line-plot-user-selection {
+    margin-left: 100px;
+}
+
 #opening-text {
     color: #456983;
     font-family: Georgia;
@@ -142,6 +154,13 @@ body {
 }
 
 #line-plot-text-2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#line-plot-text-3 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
@@ -508,14 +527,14 @@ body {
 }
 
 #shark-bites-counter {
-    color: white;
+    color: #456983;
     font-size: 70px;
     font-family: Arial;
     padding: 30px;
 }
 
 #human-fatalities-counter {
-    color: white;
+    color: #456983;
     font-size: 70px;
     font-family: Arial;
     padding: 30px;
@@ -737,7 +756,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -752,7 +771,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -767,7 +786,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -782,7 +801,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -797,7 +816,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -812,7 +831,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -827,7 +846,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -842,7 +861,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -857,7 +876,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -872,7 +891,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -887,7 +906,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -902,7 +921,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -917,7 +936,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -932,7 +951,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -947,7 +966,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -962,7 +981,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
@@ -977,11 +996,26 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #f3f3f3;
+/*    background-color: #f3f3f3; */
     padding: 1rem;
 }
 
 #scrolly-15 > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+#scrolly-15a {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+/*    background-color: #f3f3f3; */
+    padding: 1rem;
+}
+
+#scrolly-15a > * {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -1024,7 +1058,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
@@ -1048,7 +1082,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
@@ -1072,7 +1106,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 50vh;
@@ -1103,7 +1137,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
@@ -1440,7 +1474,31 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 50vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
+    background-size: cover;
+}
+
+.sticky-thing-15a p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-15a {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 50vh;

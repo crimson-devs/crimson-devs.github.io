@@ -1,5 +1,5 @@
 
-// bar chart of activities
+// bar chart of activities prior to shark bite
 
 class BarChart {
 
@@ -51,7 +51,7 @@ class BarChart {
             .attr('class', 'title bar-chart-title')
             .append('text')
             .text(vis.chartTitle)
-            .attr('transform', `translate(${vis.width / 2 + 45}, 20)`)
+            .attr('transform', `translate(${vis.width / 2 + 45}, -30)`)
             .attr('text-anchor', 'middle');
 
         // tooltip
