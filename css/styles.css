@@ -1,11 +1,11 @@
 a {
-    color: white;
-    text-decoration: underline white;
+    color: blue;
+    text-decoration: underline blue;
 
 }
 
 a:hover {
-    color: white;
+    color: blue;
 }
 
 html{scroll-behavior: smooth}
@@ -501,29 +501,36 @@ body {
 }
 
 #actions-text-1 {
-    color: white;
+    color: #456983;
     font-size: 50px;
-    font-family: Georgia;
+    font-family: Arial;
     padding: 30px;
 }
 
 #actions-text-2 {
-    color: white;
+    color: #456983;
     font-size: 50px;
-    font-family: Georgia;
+    font-family: Arial;
     padding: 30px;
 }
 
 #actions-list-1 {
-    color: white;
-    font-size: 30px;
-    font-family: Georgia;
+    color: #456983;
+    font-size: 20px;
+    font-family: Arial;
 }
 
 #references-text-1 {
-    color: white;
-    font-size: 30px;
-    font-family: Georgia;
+    color: #456983;
+    font-size: 50px;
+    font-family: Arial;
+    margin-top: 100px;
+}
+
+#references-text-2 {
+    color: #456983;
+    font-size: 20px;
+    font-family: Arial;
 }
 
 #shark-bites-counter {
@@ -578,31 +585,32 @@ body {
 #our-team-text {
     color: #456983;
     font-size: 50px;
-    font-family: Georgia;
-    padding: 30px;
+    font-family: Arial;
+    padding-top: 100px;
+    padding-left: 30px;
 }
 
 #ryan-name {
     color: #456983;
     font-size: 30px;
-    font-family: Georgia;
-    padding-top: 30px;
+    font-family: Arial;
+    padding-top: 20px;
     padding-left: 30px;
 }
 
 #karim-name {
     color: #456983;
     font-size: 30px;
-    font-family: Georgia;
-    padding-top: 30px;
+    font-family: Arial;
+    padding-top: 20px;
     padding-left: 30px;
 }
 
 #mj-name {
     color: #456983;
     font-size: 30px;
-    font-family: Georgia;
-    padding-top: 30px;
+    font-family: Arial;
+    padding-top: 20px;
     padding-left: 30px;
 
 }
@@ -610,22 +618,22 @@ body {
 #ryan-text {
     color: #456983;
     font-size: 20px;
-    font-family: Georgia;
-    padding: 30px;
+    font-family: Arial;
+    padding-left: 30px;
 }
 
 #karim-text {
     color: #456983;
     font-size: 20px;
-    font-family: Georgia;
-    padding: 30px;
+    font-family: Arial;
+    padding-left: 30px;
 }
 
 #mj-text {
     color: #456983;
     font-size: 20px;
-    font-family: Georgia;
-    padding: 30px;
+    font-family: Arial;
+    padding-left: 30px;
 }
 
 
@@ -1501,7 +1509,7 @@ article {
     background-color: white;
     z-index: 0;
     top: 12.5vh;
-    height: 50vh;
+    height: 75vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
