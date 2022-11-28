@@ -1,4 +1,6 @@
-// line chart of provoked and unprovoked bites
+
+// line chart of human fatalities, provoked and unprovoked bites
+// author:  Ryan Abbate
 
 class LineChart {
 
@@ -14,6 +16,8 @@ class LineChart {
     initVis() {
 
         let vis = this;
+
+        vis.metricType = 'Fatalities';
 
         console.log('here (initVis)')
 
@@ -46,7 +50,7 @@ class LineChart {
 
         // add chart title
         vis.svg.append('g')
-            .attr('class', 'title bar-chart-title')
+            .attr('class', 'title line-chart-title')
             .append('text')
             .text(vis.chartTitle)
             .attr('transform', `translate(${vis.width / 2 + 45}, -30)`)
@@ -97,7 +101,10 @@ class LineChart {
 
         let filteredData = []
 
-        filteredData = vis.data
+        vis.metricType = metricType;
+
+        filteredData = vis.data.filter
+
 
         console.log('wrangle data sees: ', vis.data)
 
@@ -112,7 +119,7 @@ class LineChart {
 
         // update the domains
         vis.xScale.domain([ d3.min(vis.data, function(d) {return d.Year; }), d3.max(vis.data, function(d) {return d.Year }) ]);
-        vis.yScale.domain( [ 0, d3.max(vis.data, function(d) {return d[metricType] }) ] );
+        vis.yScale.domain( [ 0, d3.max(vis.data, function(d) {return d[vis.metricType]; }) ] );
 
         // draw the line
         vis.line = vis.svg.selectAll('.line')
@@ -165,7 +172,7 @@ class LineChart {
             .duration(500)
             .attr('d', d3.line()
                 .x(function (d) { return vis.xScale(d.Year); })
-                .y(function (d) { return vis.yScale(d[metricType]); })
+                .y(function (d) { return vis.yScale(d[vis.metricType]); })
                 .curve(d3.curveMonotoneX)
             );
 

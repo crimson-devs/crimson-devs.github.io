@@ -1,5 +1,6 @@
 
 // bar chart of activities prior to shark bite
+// author: Ryan Abbate
 
 class BarChart {
 
