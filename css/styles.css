@@ -1431,7 +1431,7 @@ article {
 .sticky-thing-9d p {
     padding: 1rem;
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 600;
     color: #456983;
 }
 
@@ -1443,7 +1443,7 @@ article {
     background-color: lightgrey;
     z-index: 0;
     top: 12.5vh;
-    height: 50vh;
+    height: 75vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
