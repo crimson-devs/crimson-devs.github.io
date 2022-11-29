@@ -103,7 +103,7 @@ class LineChart {
 
         vis.metricType = metricType;
 
-        filteredData = vis.data.filter
+        filteredData = vis.data.map
 
 
         console.log('wrangle data sees: ', vis.data)
