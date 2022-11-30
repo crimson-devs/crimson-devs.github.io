@@ -177,6 +177,13 @@ body {
     padding: 30px;
 }
 
+#countries-text-2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
 #species-text-1 {
     color: white;
     font-size: 50px;
@@ -416,7 +423,6 @@ body {
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
-    margin-top: 100px;
 }
 
 #evolution-text-2 {
@@ -588,6 +594,9 @@ body {
     font-size: 100px;
     font-family: arial;
     padding: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
 }
 
 #shark-fatalities-text-1 {
@@ -1256,7 +1265,6 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
     background-size: cover;
 }
 
@@ -1726,9 +1734,9 @@ article {
     -moz-animation-name: ripple-2;
     -webkit-animation-name: ripple-2;
     animation-name: ripple-2;
-    -moz-animation-duration: 2s;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;

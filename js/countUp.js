@@ -6,7 +6,7 @@ const sharkBitesCounter = new countUp.CountUp('shark-bites-counter', 102,
         useEasing: true,
         scrollSpyDelay: 3000,
         prefix: 'In 2021, there were <br>',
-        suffix: ' bites',
+        suffix: ' bites globally.',
         scrollSpyOnce: false
     }
 )
@@ -19,9 +19,9 @@ const humanFatalitiesCounter = new countUp.CountUp('human-fatalities-counter', 1
                                                           duration: 10,
                                                           delay: 5,
                                                           useEasing: true,
-                                                          scrollSpyDelay: 8000,
+                                                          scrollSpyDelay: 4000,
                                                           prefix: 'In 2021, there were <br>',
-                                                          suffix: ' human fatalities',
+                                                          suffix: ' human fatalities.',
                                                           scrollSpyOnce: false
                                                         }
                                                    )
@@ -36,7 +36,7 @@ const sharkFatalitiesCounter = new countUp.CountUp('shark-fatalities-counter-ann
                                                           useEasing: true,
                                                           scrollSpyDelay: 8000,
                                                           prefix: 'Humans kill <br>',
-                                                          suffix: ' million sharks annually',
+                                                          suffix: ' million sharks annually.',
                                                           scrollSpyOnce: true
                                                         }
                                                    )
