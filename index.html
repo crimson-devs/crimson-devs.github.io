@@ -563,7 +563,7 @@
 
                 <div class="row step justify-content-center" data-step="1">
                     <div id="shark-population-text-1" class="col-12">
-                        Since the 1970s, shark populations have declined by a staggering 70%.
+                        Since the 1970s, shark populations have declined significantly.  The populations of some species have declined between <strong>60% to 90%</strong>!.
                     </div>
                 </div>
 
@@ -601,30 +601,6 @@
                                 </div>
                         </div>
 
-                        <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-population-text-6" class="col-12">
-                                    In some East Asian countries, shark fin soup is considered a delicacy associated with prosperity.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-population-text-7" class="col-12">
-                                    Tens of millions of sharks are killed each year - solely for their fins.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="1">
-                                <div id="shark-population-text-8" class="col-12">
-                                    In a disturbing practice known as <strong><i>"shark finning"</i></strong>, fisherman slice off the sharks' fins and often throw the sharks back into the ocean, where they bleed profusely, suffocate, and die a slow and agonizing death.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="1">
-                            <div id="shark-population-text-5" class="col-12">
-                                There is also a large global market for shark meat, oil, and souvenirs.
-                            </div>
-                        </div>
-
                     </div>
 
 
@@ -636,8 +612,48 @@
                     </div>
                 </div>
 
+            </section>
+
+
+            <section id="scrolly-12">
+                <article>
+
+                    <div class="row step justify-content-center" data-step="1">
+                        <div id="shark-population-text-6" class="col-12">
+                            In some East Asian countries, shark fin soup is considered a delicacy associated with prosperity.
+                        </div>
+                    </div>
+
+                    <div class="row step justify-content-center" data-step="1">
+                        <div id="shark-population-text-7" class="col-12">
+                            Tens of millions of sharks are killed each year - solely for their fins.
+                        </div>
+                    </div>
+
+                    <div class="row step justify-content-center" data-step="1">
+                        <div id="shark-population-text-8" class="col-12">
+                            In a disturbing practice known as <strong><i>"shark finning"</i></strong>, fisherman slice off the sharks' fins and often throw the sharks back into the ocean, where they bleed profusely, suffocate, and die a slow and agonizing death.
+                        </div>
+                    </div>
+
+                    <div class="row step justify-content-center" data-step="1">
+                        <div id="shark-population-text-5" class="col-12">
+                            There is also a large global market for shark meat, oil, and souvenirs.
+                        </div>
+                    </div>
+
+                </article>
+
+                <div class="sticky-thing-12">
+                    <div>
+                        <img src="./assets/shark-fin.jpg" alt="Image of a shark finning.">
+                    </div>
+                </div>
 
             </section>
+
+
+
 
 
 
@@ -699,8 +715,14 @@
 
                         <div class="row step justify-content-center">
                                 <div id="actions-text-1" class="col-12">
-                                    Scientists agree that eliminating the top of the food chain causes more problems - not fewer problems.  Fortunately, there are things that each of us can do to help...
+                                    Scientists agree that eliminating the top of the food chain causes more problems - not fewer problems.
                                 </div>
+                        </div>
+
+                        <div class="row step justify-content-center">
+                            <div id="actions-text-3" class="col-12">
+                                Fortunately, there are things that each of us can do to help conserve shark populations...
+                            </div>
                         </div>
 
                     </div>
@@ -939,6 +961,9 @@
     let scrolly_11 = main.querySelector('#scrolly-11');
     let sticky_11 = scrolly_11.querySelector('.sticky-thing-11');
 
+    let scrolly_12 = main.querySelector('#scrolly-12');
+    let sticky_12 = scrolly_12.querySelector('.sticky-thing-12');
+
     let scrolly_15 = main.querySelector('#scrolly-15');
     let sticky_15 = scrolly_15.querySelector('.sticky-thing-15');
 
@@ -989,6 +1014,9 @@
     let article_11 = scrolly_11.querySelector('article');
     let steps_11 = article_11.querySelectorAll('.step');
 
+    let article_12 = scrolly_12.querySelector('article');
+    let steps_12 = article_12.querySelectorAll('.step');
+
     let article_15 = scrolly_15.querySelector('article');
     let steps_15 = article_15.querySelectorAll('.step');
 
@@ -1011,6 +1039,7 @@
     let scroller_9d = scrollama();
     let scroller_10 = scrollama();
     let scroller_11 = scrollama();
+    let scroller_12 = scrollama();
     let scroller_15 = scrollama();
     let scroller_15a = scrollama();
 
@@ -1064,6 +1093,9 @@
         steps_11.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
+        steps_12.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
         steps_15.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
@@ -1086,6 +1118,7 @@
         sticky_9d.querySelector('p').innerText = el.dataset.step;
         sticky_10.querySelector('p').innerText = el.dataset.step;
         sticky_11.querySelector('p').innerText = el.dataset.step;
+        sticky_12.querySelector('p').innerText = el.dataset.step;
         sticky_15.querySelector('p').innerText = el.dataset.step;
         sticky_15a.querySelector('p').innerText = el.dataset.step;
 
@@ -1249,6 +1282,16 @@
         // set up resize event
         window.addEventListener('resize', scroller_11.resize);
 
+        scroller_12
+            .setup({
+                step: '#scrolly-12 article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_12.resize);
 
         scroller_15
             .setup({

@@ -556,6 +556,13 @@ body {
     padding: 30px;
 }
 
+#actions-text-3 {
+    color: #456983;
+    font-size: 50px;
+    font-family: Arial;
+    padding: 30px;
+}
+
 #actions-list-1 {
     color: #456983;
     font-size: 20px;
@@ -1522,7 +1529,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
