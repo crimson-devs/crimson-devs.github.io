@@ -19,7 +19,7 @@ class BarChart {
 
         console.log('here (initVis)')
 
-        vis.margin = {top: 50, right: 90, bottom: 90, left: 80};
+        vis.margin = {top: 70, right: 90, bottom: 90, left: 80};
         vis.width = 800 - vis.margin.left - vis.margin.right;
 //        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 700 - vis.margin.top - vis.margin.bottom;
@@ -52,7 +52,7 @@ class BarChart {
             .attr('class', 'title bar-chart-title')
             .append('text')
             .text(vis.chartTitle)
-            .attr('transform', `translate(${vis.width / 2 + 45}, -30)`)
+            .attr('transform', `translate(${vis.width / 2 + 45}, -50)`)
             .attr('text-anchor', 'middle');
 
         // tooltip

@@ -53,7 +53,7 @@ class LineChart {
             .attr('class', 'title line-chart-title')
             .append('text')
             .text(vis.chartTitle)
-            .attr('transform', `translate(${vis.width / 2 + 45}, -30)`)
+            .attr('transform', `translate(${vis.width / 2 + 45}, -50)`)
             .attr('text-anchor', 'middle');
 
         // tooltip
@@ -199,7 +199,7 @@ class LineChart {
             .style('color', '#456983')
             .call(d3.axisLeft(vis.yScale));
 
-        vis.circles = svg.selectAll('circle')
+        vis.circles = vis.svg.selectAll('circle')
             .data(vis.data);
 
         vis.circles.exit().remove();
@@ -210,10 +210,10 @@ class LineChart {
             .merge(vis.circles)
             .transition()
             .duration(500)
-            .attr('fill', 'red')
-            .attr('stroke', 'blue')
+            .attr('fill', 'crimson')
+            .attr('stroke', '#456983')
             .attr('cx', function(d) { return vis.xScale(d.Year); })
-            .attr('cy', function(d) { return vis.yScale(d.Unprovoked); })
+            .attr('cy', function(d) { return vis.yScale(d.Fatalities); })
             .attr('r', 4);
 
 

@@ -413,7 +413,13 @@ body {
 }
 
 .bar-chart-title {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    fill: #456983;
+}
+
+.line-chart-title {
+    font-size: 25px;
     font-weight: 600;
     fill: #456983;
 }
