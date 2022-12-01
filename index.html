@@ -16,24 +16,26 @@
     <link rel="stylesheet" type="text/css" href="css/easyScrollDots.css" />
 
     <title>Come on in, the water's fine!</title>
+    <script src="lib/d3/d3.js"></script>
+    <script src="lib/d3/d3.layout.cloud.js"></script>
+    <script src="d3.wordcloud.js"></script>
 </head>
 
 <body>
     <main>
-
         <div class="container-fluid">
-
             <div data-scroll-indicator-title="Home">
-
+                <!-- Animated ocean header GIF -->
                 <div class="row justify-content-center">
                     <div id="animated-ocean-gif" class="col-12">
-                        <!-- placeholder for animated ocean GIF -->
-                        <div id="opening-text" class="col-12">
-                            <h1 style="font-size:60px;">Swimming with the Sharks</h1>
-                            <h2>Dive in, the water's fine...</h2>
-                        </div>
 
+                    <!-- Heading and Sub-Heading -->
+                    <div id="opening-text" class="col-12">
+                        <h1 style="font-size:60px;">Swimming with the Sharks</h1>
+                        <h2>Dive in, the water's fine...</h2>
+                    </div>
 
+                        <!-- Header Scroll Icon -->
                         <div id="initial-scroll-icon" class="col-12 align-text-bottom">
                             <section id="section-1" class="initial-scroll">
                                 <h1></h1>
@@ -45,47 +47,23 @@
 
             </div>
 
-
+            <!-- Story Scrolling Dot 1 -->
             <section id="scrolly-1">
+
+                <!-- Dot 1 Blurb -->
                 <article>
-
-                    <div data-scroll-indicator-title="New Jersey Incidents">
-
+                    <div data-scroll-indicator-title="Reign of Terror Begins">
                         <div class="row step justify-content-center" data-step="">
                                 <div id="nj-incident-text-1" class="col-12">
-                                    In July 1916, five people were supposedly "attacked" by sharks while swimming along the coast of New Jersey.
+                                    July 1916 was an inflection point for Sharks in the United States.
+                                    Whereas sharks had previously been seen as harmless.
+                                    After the Jersey Shore attacks of 1916, the pendulum of public opinion swung to the other way.
                                 </div>
                         </div>
-
-                        <div class="row step justify-content-center" data-step="">
-                                <div id="nj-incident-text-2" class="col-12">
-                                    Since then, the media and popular culture have unjustly characterized sharks as "predators" with an insatiable appetite for human flesh.
-                                </div>
-                        </div>
-
-
-                        <div class="row step justify-content-center" data-step="">
-                                <div id="hook-text-1" class="col-12">
-                                    But, <i>nothing</i> could be further from the truth.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="">
-                                <div id="hook-text-2" class="col-12">
-                                    Let's redefine the relationship we have with sharks to one based on <strong>scientific data</strong> rather than limited and biased information.
-                                </div>
-                        </div>
-
-                        <div class="row step justify-content-center" data-step="">
-                            <div id="hook-text-3" class="col-12">
-                                In the visual story that unfolds, we'll show you how changing the way we <strong><i>perceive</i></strong> sharks could change our environment, our economies, and our lives for the better.
-                            </div>
-                        </div>
-
                     </div>
 
                 </article>
-
+                <!-- Dot 1 Picture -->
                 <div class="sticky-thing-1">
                     <div>
                         <img src="./assets/philadelphia-inquirer.JPG" alt="Photo of a Philadelphia Inquirer article (1916).">
@@ -93,22 +71,13 @@
                 </div>
 
             </section>
-
-
-            <div class="row justify-content-center">
-                <div id="project-title-text-1" class="col-12 text-center">
-                    <strong>Come on in, the water's fine.</strong>
-                </div>
-                <br>
-                <div id="project-title-text-2" class="col-12 text-center">
-                    Demystifying the image of sharks.
-                </div>
             </div>
 
-
-            <div data-scroll-indicator-title="Shark Bite Statistics">
+            <!-- Story Scrolling Dot 2 -->
+            <div data-scroll-indicator-title="Media Hysteria">
 
                 <section id="scrolly-4">
+                    <!-- Dot 2 Blurb -->
                     <article>
 
                             <div class="row step justify-content-center" data-step="">
@@ -116,13 +85,6 @@
                                         It's a popular misconception that sharks bite a large number of humans each year.
                                     </div>
                             </div>
-
-                            <div class="row step justify-content-center" data-step="">
-                                    <div id="shark-bites-misconception-text-2" class="col-12">
-                                        Tens of millions of people enter the oceans each year.  Globally, the number of shark bites is actually quite small...
-                                    </div>
-                            </div>
-
 
                     </article>
 
@@ -150,6 +112,7 @@
 
                 </article>
 
+                <!-- Dot 2 Chart -->
                 <div id="human-fatalities-counter" class="sticky-thing-15">
                     <p>foo</p>
                 </div>
@@ -192,17 +155,14 @@
 
             </div>
 
-<!--        </div> -->
-
-
-
+            <!-- Story Scrolling Dot 3 -->
             <section id="scrolly-5">
                 <article>
 
+                    <div data-scroll-indicator-title="Science">
 
-                    <div data-scroll-indicator-title="Prevalence of Incidents">
-
-                    <div class="row step justify-content-center">
+                        <!-- Dot 3 Blurb -->
+                        <div class="row step justify-content-center">
                             <div id="area-chart-div" class="col-12 border">
                                 <!-- placeholder for area plot (owner: Karim Serraj) -->
 
@@ -230,6 +190,7 @@
                             </div>
                     </div>
 
+                    <!-- Dot 3 Chart -->
                     <div class="row step justify-content-center" data-step="">
                             <div id="line-plot-text-2" class="col-12">
                                 The data confirms that the media vastly overstates the prevalence of shark bites.
@@ -247,12 +208,10 @@
 
             </section>
 
-
+            <!-- Story Scrolling Dot 4 -->
             <section id="scrolly-6">
                 <article>
-
-                    <div data-scroll-indicator-title="Shark Bite Locations">
-
+                    <div data-scroll-indicator-title="Data Science">
 
                         <div class="row step justify-content-center" data-step="">
                             <div id="countries-text-1" class="col-12 border">
@@ -281,11 +240,10 @@
 
             </section>
 
-
+            <!-- Story Scrolling Dot 5 -->
             <section id="scrolly-7">
                 <article>
-
-                    <div data-scroll-indicator-title="Activities">
+                    <div data-scroll-indicator-title="Shark Species Locations">
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="activities-text-1" class="col-12">
@@ -316,9 +274,8 @@
 
             </section>
 
-
+            <!-- Story Scrolling Dot 6 -->
             <div data-scroll-indicator-title="Shark Species">
-
                 <section id="scrolly-8a">
                     <article>
 
@@ -461,12 +418,11 @@
 
 
 
-
-            <div data-scroll-indicator-title="Shark Population Declines">
+            <!-- Story Scrolling Dot 7 -->
+            <div data-scroll-indicator-title="Sharks as Predators">
 
                 <section id="scrolly-9a">
                     <article>
-
                         <!-- shark fatalities counter (see text in countUp.js file) -->
                             <div class="row step justify-content-center" data-step="1">
                                     <div id="shark-fatalities-text-1" class="col-12">
@@ -589,11 +545,11 @@
 
 
 
-
+            <!-- Story Scrolling Dot 8 -->
             <section id="scrolly-10">
                 <article>
 
-                    <div data-scroll-indicator-title="Risks Faced By Sharks">
+                    <div data-scroll-indicator-title="Sharks as Preys">
 
                         <div class="row step justify-content-center" data-step="1">
                                 <div id="shark-population-text-3" class="col-12">
@@ -678,7 +634,7 @@
 
 -->
 
-
+            <!-- Story Scrolling Dot 9 -->
             <section id="scrolly-11">
                 <article>
 
@@ -742,8 +698,8 @@
             </section>
 
 
-
-            <div data-scroll-indicator-title="Actions">
+            <!-- Story Scrolling Dot 10 -->
+            <div data-scroll-indicator-title="How We Can Help?">
 
                     <div class="row step justify-content-left">
                             <div id="actions-text-2" class="col-12">
