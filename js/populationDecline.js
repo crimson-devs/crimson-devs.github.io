@@ -127,6 +127,9 @@ class PopulationDecline {
             .enter()
             .append('rect')
             .attr('class', 'bar')
+            .attr('x', d => vis.xScale(d.species))
+            .attr('y', d => vis.yScale(0))
+            .attr('width', vis.xScale.bandwidth())
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
@@ -163,10 +166,8 @@ class PopulationDecline {
             })
             .merge(vis.bars)
             .transition()
-            .duration(1200)
-            .attr('x', d => vis.xScale(d.species) )
+            .duration(1000)
             .attr('y', d => vis.yScale(d.plotValue) )
-            .attr('width', vis.xScale.bandwidth() )
             .attr('height', function(d) { return vis.height - vis.yScale(d.plotValue); })
             .attr('fill', 'crimson')
 //            .attr('stroke', 'grey');
