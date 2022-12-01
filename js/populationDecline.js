@@ -207,7 +207,8 @@ class PopulationDecline {
             .text( function (d) {
                 return '-' + (100 - d.plotValue) + '%';
             })
-
+            .style('font-weight', 600)
+            .style('fill', 'red')
 
     }
 
