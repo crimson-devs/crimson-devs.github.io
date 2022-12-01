@@ -131,7 +131,7 @@ class PopulationDecline {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'grey')
-                    .attr('fill', '#c95151')
+                    .attr('fill', '#456983')
 
                 vis.tooltip
                     .style('opacity', 1)
@@ -151,7 +151,7 @@ class PopulationDecline {
                     .attr('stroke-width', 1)
                     .attr('stroke', '#456983')
                     .attr('fill', function(d) {
-                        return '#456983'
+                        return 'crimson'
                     })
 
                 vis.tooltip
@@ -163,12 +163,12 @@ class PopulationDecline {
             })
             .merge(vis.bars)
             .transition()
-            .duration(2000)
+            .duration(1200)
             .attr('x', d => vis.xScale(d.species) )
             .attr('y', d => vis.yScale(d.plotValue) )
             .attr('width', vis.xScale.bandwidth() )
             .attr('height', function(d) { return vis.height - vis.yScale(d.plotValue); })
-            .attr('fill', '#456983')
+            .attr('fill', 'crimson')
 //            .attr('stroke', 'grey');
 
 
@@ -192,6 +192,20 @@ class PopulationDecline {
             .style('font-size', '15px')
             .style('color', '#456983')
             .call(d3.axisLeft(vis.yScale));
+
+        vis.text = vis.svg.selectAll('.text')
+            .data(vis.data)
+
+        vis.text
+            .enter()
+            .append('text')
+            .attr('class', 'text')
+            .attr('text-anchor', 'middle')
+            .attr('x', d => vis.xScale(d.species) + 27)
+            .attr('y', d => vis.yScale(d.plotValue) - 10)
+            .text( function (d) {
+                return '-' + (100 - d.plotValue) + '%';
+            })
 
 
     }

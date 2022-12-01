@@ -1001,6 +1001,7 @@ CSS for Scrollama functionality (https://github.com/russellsamora/scrollama)
     display: flex;
 /*    background-color: #f3f3f3; */
     padding: 1rem;
+    margin-top: 100px;
 }
 
 #scrolly-9c > * {
@@ -1447,6 +1448,7 @@ article {
     justify-content: center;
     /* background-image: url('/assets/white-shark.jpg'); */
     background-size: cover;
+    margin-top: 100px;
 }
 
 .sticky-thing-9d p {
