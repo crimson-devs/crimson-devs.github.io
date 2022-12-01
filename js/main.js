@@ -39,7 +39,7 @@ function createVis(data) {
     // Instantiate the visualizations
     barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they were bitten by a shark?');
     lineChart = new LineChart('line-plot-div', lineChartData, 'Human Fatalities Since 1900');
-    populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in the Shark Population Since ')
+    populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
 
     myMapVis = new MapVis('map-div', sharksData, geoData)
 
