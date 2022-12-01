@@ -15,7 +15,7 @@
     <!-- CSS for Easy Scroll Dots -->
     <link rel="stylesheet" type="text/css" href="css/easyScrollDots.css" />
 
-    <title>Come on in, the water's fine!</title>
+    <title> Swimming with the Sharks, Dive In!!</title>
     <script src="lib/d3/d3.js"></script>
     <script src="lib/d3/d3.layout.cloud.js"></script>
     <script src="d3.wordcloud.js"></script>
@@ -44,15 +44,16 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Story Scrolling Dot 1 -->
             <section id="scrolly-1">
 
+                <!-- Dot 1 Title -->
+                <div data-scroll-indicator-title="Reign of Terror Begins">
+
                 <!-- Dot 1 Blurb -->
                 <article>
-                    <div data-scroll-indicator-title="Reign of Terror Begins">
                         <div class="row step justify-content-center" data-step="">
                                 <div id="nj-incident-text-1" class="col-12">
                                     July 1916 was an inflection point for Sharks in the United States.
@@ -60,10 +61,11 @@
                                     After the Jersey Shore attacks of 1916, the pendulum of public opinion swung to the other way.
                                 </div>
                         </div>
-                    </div>
 
                 </article>
-                <!-- Dot 1 Picture -->
+                </div>
+
+                <!-- Dot 1 Image -->
                 <div class="sticky-thing-1">
                     <div>
                         <img src="./assets/philadelphia-inquirer.JPG" alt="Photo of a Philadelphia Inquirer article (1916).">
@@ -71,29 +73,25 @@
                 </div>
 
             </section>
-            </div>
 
             <!-- Story Scrolling Dot 2 -->
-            <div data-scroll-indicator-title="Media Hysteria">
-
                 <section id="scrolly-4">
+
+                    <!-- Dot 2 Title -->
+                    <div data-scroll-indicator-title="Media Hysteria">
+
                     <!-- Dot 2 Blurb -->
                     <article>
-
                             <div class="row step justify-content-center" data-step="">
                                     <div id="shark-bites-misconception-text-1" class="col-12">
-                                        It's a popular misconception that sharks bite a large number of humans each year.
+                                        Since then the media and popular culture have portrayed the sharks as
+                                        cold-blooded predators with an insatiable appetite for human flesh.
                                     </div>
                             </div>
-
                     </article>
 
-                    <div id="shark-bites-counter" class="sticky-thing-4">
-                        <p>baz</p>
-                    </div>
 
                 </section>
-
 
                 <section id="scrolly-15">
                     <article>
@@ -113,41 +111,12 @@
                 </article>
 
                 <!-- Dot 2 Chart -->
-                <div id="human-fatalities-counter" class="sticky-thing-15">
-                    <p>foo</p>
-                </div>
+
 
                 </section>
 
 
-            <section id="scrolly-15a">
-                <article>
 
-
-
-                </article>
-
-
-                <div class="row">
-
-                    <div class="row">
-                        <div id="line-plot-user-selection">
-                            <div class="form-group">
-                                <select class="form-control" id="metric-type" onchange="updateMetric()">
-                                    <option value="Unprovoked">Unprovoked Bites</option>
-                                    <option value="Provoked">Provoked Bites</option>
-                                    <option value="Fatalities" selected>Fatalities</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="line-plot-div" class="sticky-thing-15a">
-                        <p></p>
-                    </div>
-                </div>
-
-            </section>
 
             </div>
 
@@ -387,10 +356,16 @@
                     <article>
                         <div class="row step justify-content-center" data-step="">
                             <div id="line-plot-text-3" class="col-12">
-                                Is this true?  Use this visualization to explore the prevalence of shark bites.
+                               Sharks as Predators.
                             </div>
                         </div>
-                        <!-- shark fatalities counter (see text in countUp.js file) -->
+
+                            <div class="row step justify-content-center" data-step="">
+                                <div id="shark-bites-misconception-text-1" class="col-12">
+                                    It's a popular misconception that sharks bite a large number of humans each year.
+                                </div>
+                            </div>
+
                             <div class="row step justify-content-center" data-step="1">
                                     <div id="shark-fatalities-text-1" class="col-12">
                                         Although sharks sit atop the marine food chain, they are threatened by a vicious predator:  humans
@@ -405,6 +380,12 @@
 
                     </article>
 
+                    <!-- Shark Bites counter -->
+                    <div id="shark-bites-counter" class="sticky-thing-4">
+                        <p>baz</p>
+                    </div>
+
+                    <!-- Shark Fatalities counter (see text in countUp.js file) -->
                     <div id="shark-fatalities-counter-annually" class="sticky-thing-9a">
                         <p>foo</p>
                     </div>
@@ -412,8 +393,8 @@
                 </section>
 
                 <section id="scrolly-9b">
+                    <!-- Humans Kill Sharks -->
                     <article>
-
                             <div class="row step justify-content-center" data-step=2">
                                 <div id="shark-fatalities-seconds" class="col-12">
                                     That's <strong>1</strong> shark every <strong><i>3 seconds</i></strong> - as depicted by the visualization to the right.
@@ -422,87 +403,74 @@
 
                     </article>
 
+                    <!-- Blood Drip -->
                     <div class="sticky-thing-9b">
-
                         <br>
-
                         <div id="blood-drip">
                             <div style="margin: 175px auto" class="drop"></div>
                             <div style="margin: 175px auto" class="wave"></div>
                         </div>
-
                     </div>
 
                 </section>
 
+                <!-- <section id="scrolly-15">
+                    <article>
+
+                        <div class="row step justify-content-center" data-step="">
+                            <div id="human-fatalities-text-1" class="col-12">
+                                Fortunately, there are very few human fatalities resulting from shark bites each year...
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="">
+                            <div id="line-plot-text-1" class="col-12">
+                                But, the media wants us to believe that shark "attacks" are becoming more prevalent.
+                            </div>
+                        </div>
+
+                    </article> -->
+
+                    <!-- Dot 2 Chart -->
+                    <div id="human-fatalities-counter" class="sticky-thing-15">
+                        <p>foo</p>
+                    </div>
+
+                </section>
+
+
+                <section id="scrolly-15a">
+                    <article>
+
+
+
+                    </article>
+
+
+                    <div class="row">
+
+                        <div class="row">
+                            <div id="line-plot-user-selection">
+                                <div class="form-group">
+                                    <select class="form-control" id="metric-type" onchange="updateMetric()">
+                                        <option value="Unprovoked">Unprovoked Bites</option>
+                                        <option value="Provoked">Provoked Bites</option>
+                                        <option value="Fatalities" selected>Fatalities</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="line-plot-div" class="sticky-thing-15a">
+                            <p></p>
+                        </div>
+                    </div>
+
+                </section> -->
+
             </div>
 
-            <section id="scrolly-9d">
-                <article>
 
-                    <div class="row step justify-content-center" data-step="1">
-                        <div id="evolution-text-1" class="col-12">
-                            Sharks have been evolving for more than <strong>400 million</strong> years.
-                        </div>
-                    </div>
-
-                    <div class="row step justify-content-center" data-step="1">
-                        <div id="evolution-text-2" class="col-12">
-                            They predate humans by 380 million years.  They predate dinosaurs and even trees.
-                        </div>
-                    </div>
-
-                    <div class="row step justify-content-center" data-step="1">
-                        <div id="evolution-text-3" class="col-12">
-                            Sharks play a critically important role in the marine ecosystem, serving as the oceans' "immune system".
-                        </div>
-                    </div>
-
-                    <div class="row step justify-content-center" data-step="1">
-                        <div id="evolution-text-4" class="col-12">
-                            They regulate the health of the oceans by eating the dead, dying, weak, sick, and injured animals - leaving only the healthiest individuals to reproduce and keeping populations in balance.
-                        </div>
-                    </div>
-
-
-                </article>
-
-                <div id="evolution-plot" class="sticky-thing-9d">
-
-                        <p>"Humanity and civilization cannot survive on this planet with a dead ocean. If our oceans die, we die."
-                        <br>
-                        <br>
-                            - Captain Paul Watson
-                        </p>
-
-                </div>
-
-            </section>
-
-
-
-            <section id="scrolly-9c">
-                <article>
-
-                <div class="row step justify-content-center" data-step="1">
-                    <div id="shark-population-text-1" class="col-12">
-                        Since the 1970s, shark populations have declined significantly.  The populations of some species have declined between <strong>60% to 90%</strong>!
-                    </div>
-                </div>
-
-                <div class="row step justify-content-center" data-step="1">
-                    <div id="shark-population-text-2" class="col-12">
-                        More than 1/3 of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
-                    </div>
-                </div>
-
-                </article>
-
-                <div id="shark-population-decline-plot" class="sticky-thing-9c">
-                    <p></p>
-                </div>
-
-            </section>
 
 
 
@@ -568,6 +536,126 @@
                     </div>
                 </div>
 
+                <section id="scrolly-9a">
+                    <article>
+                        <div class="row step justify-content-center" data-step="">
+                            <div id="line-plot-text-3" class="col-12">
+                                Is this true?  Use this visualization to explore the prevalence of shark bites.
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="shark-fatalities-text-1" class="col-12">
+                                Although sharks sit atop the marine food chain, they are threatened by a vicious predator:  humans
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="shark-fatalities-hourly" class="col-12">
+                                Humans kill <strong>11,000</strong> sharks every <i>hour</i>.
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Shark Fatalities counter (see text in countUp.js file) -->
+                    <div id="shark-fatalities-counter-annually" class="sticky-thing-9a">
+                        <p>foo</p>
+                    </div>
+
+                </section>
+
+                <section id="scrolly-9b">
+                    <!-- Humans Kill Sharks -->
+                    <article>
+                        <div class="row step justify-content-center" data-step=2">
+                            <div id="shark-fatalities-seconds" class="col-12">
+                                That's <strong>1</strong> shark every <strong><i>3 seconds</i></strong> - as depicted by the visualization to the right.
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Blood Drip -->
+                    <div class="sticky-thing-9b">
+                        <br>
+                        <div id="blood-drip">
+                            <div style="margin: 175px auto" class="drop"></div>
+                            <div style="margin: 175px auto" class="wave"></div>
+                        </div>
+                    </div>
+
+                </section>
+
+                </div>
+
+                <section id="scrolly-9d">
+                    <article>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="evolution-text-1" class="col-12">
+                                Sharks have been evolving for more than <strong>400 million</strong> years.
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="evolution-text-2" class="col-12">
+                                They predate humans by 380 million years.  They predate dinosaurs and even trees.
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="evolution-text-3" class="col-12">
+                                Sharks play a critically important role in the marine ecosystem, serving as the oceans' "immune system".
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="evolution-text-4" class="col-12">
+                                They regulate the health of the oceans by eating the dead, dying, weak, sick, and injured animals - leaving only the healthiest individuals to reproduce and keeping populations in balance.
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                    <div id="evolution-plot" class="sticky-thing-9d">
+
+                        <p>"Humanity and civilization cannot survive on this planet with a dead ocean. If our oceans die, we die."
+                            <br>
+                            <br>
+                            - Captain Paul Watson
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <section id="scrolly-9c">
+                    <article>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="shark-population-text-1" class="col-12">
+                                Since the 1970s, shark populations have declined significantly.  The populations of some species have declined between <strong>60% to 90%</strong>!
+                            </div>
+                        </div>
+
+                        <div class="row step justify-content-center" data-step="1">
+                            <div id="shark-population-text-2" class="col-12">
+                                More than 1/3 of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <div id="shark-population-decline-plot" class="sticky-thing-9c">
+                        <p></p>
+                    </div>
+
+                </section>
+
             </section>
 
 
@@ -612,12 +700,12 @@
             <!-- Story Scrolling Dot 10 -->
             <div data-scroll-indicator-title="Ecological Concerns">
 
+                <div class="row step justify-content-center">
 
-                div class="row step justify-content-center">
                 <div id="ocean-reliance-text-1" class="col-12">
                     Either directly or indirectly, we all rely on the oceans.  <strong>Billions</strong> of people rely on the oceans for food, while more than <strong>200 million</strong> people rely on the oceans for employment.
                 </div>
-            </div>
+                </div>
 
 
         <!--                    <div class="row step justify-content-center">
@@ -633,31 +721,30 @@
 
         -->
 
-        <div class="row step justify-content-center">
-            <div id="ocean-reliance-text-2" class="col-12">
-                Perhaps most importantly, the oceans absorb CO<sub>2</sub> from the atmosphere.
-            </div>
-        </div>
+                <div class="row step justify-content-center">
+                    <div id="ocean-reliance-text-2" class="col-12">
+                        Perhaps most importantly, the oceans absorb CO<sub>2</sub> from the atmosphere.
+                    </div>
+                </div>
 
-        <div class="row step justify-content-center">
-            <div id="ocean-reliance-text-3" class="col-12">
-                70-80% of the air we breathe comes from the oceans.
-            </div>
-        </div>
+                <div class="row step justify-content-center">
+                    <div id="ocean-reliance-text-3" class="col-12">
+                        70-80% of the air we breathe comes from the oceans.
+                    </div>
+                </div>
 
 
+                <div class="row step justify-content-center">
+                    <div id="actions-text-1" class="col-12">
+                        Scientists agree that eliminating the top of the food chain causes more problems - not fewer problems.
+                    </div>
+                </div>
 
-        <div class="row step justify-content-center">
-            <div id="actions-text-1" class="col-12">
-                Scientists agree that eliminating the top of the food chain causes more problems - not fewer problems.
-            </div>
-        </div>
-
-        <div class="row step justify-content-center">
-            <div id="actions-text-3" class="col-12">
-                Fortunately, there are things that each of us can do to help conserve shark populations...
-            </div>
-        </div>
+                <div class="row step justify-content-center">
+                    <div id="actions-text-3" class="col-12">
+                        Fortunately, there are things that each of us can do to help conserve shark populations...
+                    </div>
+                </div>
 
         </div>
 
