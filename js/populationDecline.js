@@ -1,8 +1,8 @@
 
-// bar chart of activities prior to shark bite
+// bar chart of shark population decline
 // author: Ryan Abbate
 
-class BarChart {
+class PopulationDecline {
 
     constructor(parentElement, data, chartTitle) {
         this.parentElement = parentElement;
@@ -76,7 +76,7 @@ class BarChart {
         vis.svg.append('text')
             .attr('x', -65)
             .attr('y', -20)
-            .text('Occurrences')
+            .text('Shark Population (%)')
             .style('font-size', 20)
             .style('font-weight', 600)
             .style('fill', '#456983');
@@ -85,7 +85,7 @@ class BarChart {
         vis.svg.append('text')
             .attr('x', vis.width - 35)
             .attr('y', vis.height + 50)
-            .text('Activity')
+            .text('Species')
             .style('font-size', 20)
             .style('font-weight', 600)
             .style('fill', '#456983');
@@ -114,8 +114,8 @@ class BarChart {
         let vis = this;
 
         // update the domains
-        vis.xScale.domain(vis.data.map(function (d) { return d.activity; }));
-        vis.yScale.domain( [ 0, d3.max(vis.data, function(d) {return d.value; }) ] );
+        vis.xScale.domain(vis.data.map(function (d) { return d.species; }));
+        vis.yScale.domain( [ 0, 100 ] );
 
         // draw the bars
         vis.bars = vis.svg.selectAll('.bar')
@@ -127,11 +127,14 @@ class BarChart {
             .enter()
             .append('rect')
             .attr('class', 'bar')
+            .attr('x', d => vis.xScale(d.species))
+            .attr('y', d => vis.yScale(vis.height))
+            .attr('width', vis.xScale.bandwidth())
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'grey')
-                    .attr('fill', '#c95151')
+                    .attr('fill', '#456983')
 
                 vis.tooltip
                     .style('opacity', 1)
@@ -139,8 +142,8 @@ class BarChart {
                     .style('top', event.pageY + 'px')
                     .html(`
                     <div style='border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px'>
-                    <h3>${d.activity}</h3>
-                    <h4> ${d.value.toLocaleString()} </h4>
+                    <h3>${d.species}</h3>
+                    <h4> ${100- d.plotValue.toLocaleString()}% decline </h4>
                     </div>
                                         
                     `)
@@ -151,7 +154,7 @@ class BarChart {
                     .attr('stroke-width', 1)
                     .attr('stroke', '#456983')
                     .attr('fill', function(d) {
-                        return '#456983'
+                        return 'crimson'
                     })
 
                 vis.tooltip
@@ -163,12 +166,10 @@ class BarChart {
             })
             .merge(vis.bars)
             .transition()
-            .duration(500)
-            .attr('x', d => vis.xScale(d.activity) )
-            .attr('y', d => vis.yScale(d.value) )
-            .attr('width', vis.xScale.bandwidth() )
-            .attr('height', function(d) { return vis.height - vis.yScale(d.value); })
-            .attr('fill', '#456983')
+            .duration(2000)
+            .attr('y', d => vis.yScale(d.plotValue) )
+            .attr('height', function(d) { return vis.height - vis.yScale(d.plotValue); })
+            .attr('fill', 'crimson')
 //            .attr('stroke', 'grey');
 
 
@@ -180,7 +181,7 @@ class BarChart {
             .style('color', '#456983')
             .call(d3.axisBottom((vis.xScale)))
             .selectAll('text')
-            .attr('y', 10)
+            .attr('y', 30)
             .attr('x', -35)
             .attr('dy', '.35em')
             .attr('transform', 'rotate(-30)')
@@ -193,6 +194,21 @@ class BarChart {
             .style('color', '#456983')
             .call(d3.axisLeft(vis.yScale));
 
+        vis.text = vis.svg.selectAll('.text')
+            .data(vis.data)
+
+        vis.text
+            .enter()
+            .append('text')
+            .attr('class', 'text')
+            .attr('text-anchor', 'middle')
+            .attr('x', d => vis.xScale(d.species) + 27)
+            .attr('y', d => vis.yScale(d.plotValue) - 10)
+            .text( function (d) {
+                return '-' + (100 - d.plotValue) + '%';
+            })
+            .style('font-weight', 600)
+            .style('fill', 'red')
 
     }
 
