@@ -9,7 +9,8 @@ let promises = [
     d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'),
     d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'),
     d3.csv('data/shark-bite-type.csv', d3.autoType),
-    d3.csv('data/shark-population-decline.csv', d3.autoType)
+    d3.csv('data/shark-population-decline.csv', d3.autoType),
+    d3.csv('data/shark-encounters.csv')
 
 ];
 
@@ -41,7 +42,7 @@ function createVis(data) {
     lineChart = new LineChart('line-plot-div', lineChartData, 'Human Fatalities Since 1900');
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
 
-    myMapVis = new MapVis('map-div', sharksData, geoData)
+    myMapVis = new MapVis('map-div', sharksData, geoData, data[9])
 
 //    lollipopChart = new LollipopChart('foo-div', lollipopChartData);
 
