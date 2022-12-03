@@ -4,11 +4,11 @@ $('.carousel').carousel({
 });
 
 $('.poster').hover(function() {
-    var movieId = $(this).data("movie");
-    movieId = parseInt(movieId);
+    var sharkId = $(this).data("shark");
+    sharkId = parseInt(sharkId);
     $(this).addClass("shadowOn");
 
     // turn off shadow for all other posters
     $('.poster').not(this).removeClass("shadowOn");
-    clicked(movieId, mapVis1);
+    clicked(sharkId, mapVis);
 })

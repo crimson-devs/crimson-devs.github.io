@@ -14,9 +14,9 @@ let promises = [
     d3.csv('data/shark-bite-type.csv', d3.autoType),
     d3.csv('data/shark-population-decline.csv', d3.autoType),
     d3.csv('data/shark-encounters.csv', d3.autoType),
-    d3.csv('data/map-data-all.csv'),
+    d3.csv('data/my_all_countries.csv'),
     d3.json('data/slim-2.json'),
-    d3.csv('data/map-data-aux.csv'),
+    d3.csv('data/my_all_encounter.csv'),
 ];
 
 Promise.all(promises)
@@ -45,11 +45,8 @@ function createVis(data) {
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
 
 
-    // myMapVis = new MapVis('map-div', sharksData, geoData, data[9]);
-    //     .defer(d3.csv, 'data/clean/map-data-all.csv')
-    //     .defer(d3.json, 'data/clean/world-110m.json')
-    //     .defer(d3.json, 'data/clean/slim-2.json')
-    //     .defer(d3.csv, 'data/clean/map-data-aux.csv')
+    myMapVis = new MapGlobe('map-div', sharksData, geoData, data[9]);
+
     mapVis1 = new MapVis('map-vis', data[10], data[4],  data[11], data[12]);
     //    lollipopChart = new LollipopChart('foo-div', lollipopChartData);
 }

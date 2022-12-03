@@ -480,6 +480,24 @@
         <!-- Dot 2 Chart -->
 
         <section id="scrolly-15a">
+            <div>
+                <svg height="300" width="1000">
+                    <text x="75" y="15" fill="black">Heart Disease</text>
+                    <circle cx="120" cy="150" r="100" fill="#ff0000" ; />
+
+                    <text x="280" y="15" fill="black">Cancer</text>
+                    <circle cx="310" cy="150" r="75" fill="#0000ff" ; />
+
+                    <text x="430" y="15" fill="black">Stroke</text>
+                    <circle cx="450" cy="150" r="50" fill="#ffff00" ; />
+
+                    <text x="520" y="15" fill="black">Covid-19</text>
+                    <circle cx="550" cy="150" r="25" fill="#00FF00" ; />
+
+                    <text x="590" y="15" fill="black">Shark Bite</text>
+                    <circle cx="620" cy="150" r="5" fill="#008080" ; />
+                </svg>
+            </div>
             <article>
             </article>
 
@@ -560,6 +578,7 @@
                             </div>
                         </div>
                     </article>
+
                 </section>
             </article>
 
@@ -739,10 +758,9 @@
 
     <div id="map-sec" style="height: 800px" class="section global-background col-12">
         <div class="container box box2" id="map-container">
-            <h3 style="position:absolute;left:32%;top:5%;margin-bottom:0px;margin-top:0px;"> How Likely Are You to Die From A Shark Bite</h3>
+            <h3 style="position:absolute;left:32%;top:5%;margin-bottom:0px;margin-top:0px;">Odds of Shark Attack, When Doing these Activities Globally? </h3>
 
-            <div class="stars-imdb"></div>
-            <div class="stars-meta"></div>
+
             <div id="map-vis" class="vis-container"></div>
 
             <!-- carousel code adapted from: https://www.codeply.com/go/HDu8lT7NxJ -->
@@ -758,21 +776,20 @@
 
                     <div class="carousel-inner w-100" role="listbox">
                         <div class="carousel-item row no-gutters active">
-                            <div class="col-2 float-left"><img data-movie="13" class="img-fluid poster" src="img/Bathing.jpg" alt="Bathing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="19" class="img-fluid poster" src="img/Diving.jpg" alt="Driving" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="14" class="img-fluid poster" src="img/Fishing.png" alt="Fishing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="20" class="img-fluid poster" src="img/Floating.png" alt="Floating" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="7" class="img-fluid poster" src="img/Kayaking.jpg" alt="Kayaking" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="15" class="img-fluid poster" src="img/Paddling.jpg" alt="Paddling" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="0" class="img-fluid poster" src="img/Bathing.jpg" alt="Bathing" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="1" class="img-fluid poster" src="img/Diving.jpg" alt="Driving" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="2" class="img-fluid poster" src="img/Fishing.png" alt="Fishing" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="3" class="img-fluid poster" src="img/Floating.png" alt="Floating" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="4" class="img-fluid poster" src="img/Kayaking.jpg" alt="Kayaking" width=140 height=180></div>
+
                         </div>
                         <div class="carousel-item row no-gutters">
-                            <div class="col-2 float-left"><img data-movie="22" class="img-fluid poster" src="img/Playing.png" alt="Playing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="8" class="img-fluid poster" src="img/Surfing.png" alt="Surfing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="11" class="img-fluid poster" src="img/Swimming.png" alt="Swimming" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-movie="2" class="img-fluid poster" src="img/Wading.jpg" alt="Wading" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="5" class="img-fluid poster" src="img/Paddling.jpg" alt="Paddling" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="6" class="img-fluid poster" src="img/Playing.png" alt="Playing" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="7" class="img-fluid poster" src="img/Surfing.png" alt="Surfing" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="8" class="img-fluid poster" src="img/Swimming.png" alt="Swimming" width=140 height=180></div>
+                            <div class="col-2 float-left"><img data-shark="9" class="img-fluid poster" src="img/Wading.jpg" alt="Wading" width=140 height=180></div>
                         </div>
-
-
                     </div>
                     <a class="carousel-control-prev" href="#posterCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -785,7 +802,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
     </div>
 </main>
@@ -920,7 +937,6 @@
 
     let scrolly_15a = main.querySelector('#scrolly-15a');
     let sticky_15a = scrolly_15a.querySelector('.sticky-thing-15a');
-
 
     let article_1 = scrolly_1.querySelector('article');
     let steps_1 = article_1.querySelectorAll('.step');

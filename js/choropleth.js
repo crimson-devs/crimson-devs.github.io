@@ -1,8 +1,8 @@
 /* * * * * * * * * * * * * *
-*          MapVis          *
+*          MapGlobe          *
 * * * * * * * * * * * * * */
 
-class MapVis {
+class MapGlobe {
     constructor(parentElement, sharksData, geoData, data) {
         this.parentElement = parentElement;
         this.geoData = geoData;

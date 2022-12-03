@@ -46,7 +46,7 @@ MapVis.prototype.initVis = function() {
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-  vis.selectedMovie = vis.allData[0];
+  vis.selectedShark = vis.allData[0];
   vis.nameToAllDataIdx = {};
   console.log("here is allData", vis.allData);
   vis.allData.forEach((d, i) => {
@@ -68,7 +68,6 @@ MapVis.prototype.initVis = function() {
 
   vis.svgCol2.append("text")
     .attr("class", "bar-title")
-    .text('Top 3 countries by Fatalities')
     .attr("x", 0)
     .attr("y", 120)
     .attr("fill", "gray")
@@ -77,7 +76,6 @@ MapVis.prototype.initVis = function() {
 
   vis.svgCol2.append("text")
     .attr("class", "pie-title")
-    .text('Provoked vs. UnProvoked')
     .attr("x", 310)
     .attr("y", 30)
     .attr("fill", "gray")
@@ -87,7 +85,6 @@ MapVis.prototype.initVis = function() {
 
   vis.svgCol2.append("text")
     .attr("class", "col2-text")
-    .text('Humans')
     .attr("x", 0)
     .attr("y", 70)
     .attr("fill", "black")
@@ -95,7 +92,6 @@ MapVis.prototype.initVis = function() {
 
   vis.svgCol2.append("text")
     .attr("class", "col2-text")
-    .text('Sharks')
     .attr("x", 0)
     .attr("y", 90)
     .attr("fill", "black")
@@ -121,7 +117,7 @@ MapVis.prototype.initVis = function() {
   vis.svg.append("g")
     .append("text")
     .attr("class", "legend-text")
-    .text('Fatalities (%)')
+    .text('1 in How Many Odds')
     .attr("x", 23)
     .attr("y", -10)
     .attr("fill", "black")
@@ -157,7 +153,7 @@ MapVis.prototype.wrangleData = function() {
     d.International = +d.International;
   })
 
-  vis.movieYearRangeArr = [
+  vis.sharkYearRangeArr = [
     [],
     [],
     []
@@ -165,11 +161,11 @@ MapVis.prototype.wrangleData = function() {
 
   vis.auxData.forEach((d) => {
     if (d.Year <= 2013) {
-      vis.movieYearRangeArr[0].push(d.Title);
+      vis.sharkYearRangeArr[0].push(d.Title);
     } else if (d.Year <= 2017) {
-      vis.movieYearRangeArr[1].push(d.Title);
+      vis.sharkYearRangeArr[1].push(d.Title);
     } else {
-      vis.movieYearRangeArr[2].push(d.Title);
+      vis.sharkYearRangeArr[2].push(d.Title);
     }
   });
 
@@ -181,19 +177,19 @@ MapVis.prototype.wrangleData = function() {
 MapVis.prototype.updateDataSelection = function() {
   var vis = this;
 
-  vis.movieNames = vis.data.map((d) => d.Name);
-  var curMovie = [];
-  var movieKeys = Object.keys(vis.selectedMovie)
-  for (var key of movieKeys) {
+  vis.sharkNames = vis.data.map((d) => d.Name);
+  var curShark = [];
+  var sharkKeys = Object.keys(vis.selectedShark)
+  for (var key of sharkKeys) {
     if (key in vis.countryToId) {
       var obj = {
         'Market': key,
-        'Gross': vis.selectedMovie[key]
+        'Gross': vis.selectedShark[key]
       };
-      curMovie.push(obj);
+      curShark.push(obj);
     }
   }
-  vis.data = curMovie;
+  vis.data = curShark;
 
   var allCountryIds = []
   vis.data.forEach((d) => {
@@ -223,7 +219,7 @@ MapVis.prototype.updateDataSelection = function() {
 MapVis.prototype.updateVis = function() {
   var vis = this;
 
-  vis.color.domain([0.1, 100000, 1000000, 10000000, 100000000, 500000000, 1000000000]);
+  vis.color.domain([0, 20, 50, 100, 300, 700,1000]);
 
   var emptyColor = ["lightgray"];
   var colors = emptyColor.concat(d3.schemeReds[6]);
@@ -293,7 +289,7 @@ MapVis.prototype.updateVis = function() {
     .attr("fill", (d) => d);
   legendRects.exit().remove();
 
-  var legendTexts = ['No Data', '0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50+%'];
+  var legendTexts = ['No Data', '0-50', '50-100', '100-300', '300-700', '700-2000', '2000+'];
   var texts = vis.svg.selectAll(".texts")
     .data(legendTexts);
 
@@ -315,14 +311,14 @@ MapVis.prototype.updateVis = function() {
     .style("text-anchor", "start");
   texts.exit().remove();
 
-  // Col 2 movie title header
-  var movieTitle = vis.svgCol2.selectAll(".movie-name")
-    .data([vis.selectedMovie])
+  // Col 2 shark title header
+  var sharkTitle = vis.svgCol2.selectAll(".shark-name")
+    .data([vis.selectedShark])
 
-  movieTitle.enter()
+  sharkTitle.enter()
     .append("text")
-    .merge(movieTitle)
-    .attr("class", "movie-name")
+    .merge(sharkTitle)
+    .attr("class", "shark-name")
     .attr("x", 0)
     .attr("y", 10)
     .text((d) => {
@@ -330,80 +326,24 @@ MapVis.prototype.updateVis = function() {
     })
     .call(wrap, 400)
     .attr("fill", "black")
-  movieTitle.exit().remove();
+  sharkTitle.exit().remove();
 
   // Col 2 Charts
-  var selectedMovieAux = vis.auxData.filter((d) => {
-    return vis.selectedMovie.Name === d.Title;
+  var selectedSharkAux = vis.auxData.filter((d) => {
+    return vis.selectedShark.Name === d.Title;
   })[0];
-
-  var year = vis.svgCol2.selectAll('.year-released')
-    .data([selectedMovieAux.Year])
-
-  year.enter()
-    .append("text")
-    .attr("class", "year-released")
-    .merge(year)
-    .text((d)=> 'Year Released: '+d)
-    .attr("x", 0)
-    .attr("y", 40)
-    .attr("fill", "black")
-    .style("font-size", 13)
-
-  year.exit().remove();
-
-  $(".stars-imdb .rate-select-layer").css("width", selectedMovieAux['imdbRating'] / 5 * 100);
-  $(".stars-meta .rate-select-layer").css("width", selectedMovieAux['Metascore'] / 5 * 100);
-
-  var imdbText = vis.svgCol2.selectAll('.imdb-rating')
-    .data([selectedMovieAux['imdbRating']])
-
-  imdbText.enter()
-    .append("text")
-    .attr("class", "imdb-rating")
-    .merge(imdbText)
-    .text((d)=> d.toFixed(2))
-    .attr("x", 180)
-    .attr("y", 70)
-    .attr("fill", "#cea731")
-    .style("font-size", 13)
-
-  imdbText.exit().remove();
-
-  var metaText = vis.svgCol2.selectAll('.meta-rating')
-    .data([selectedMovieAux['Metascore']])
-
-  metaText.enter()
-    .append("text")
-    .attr("class", "meta-rating")
-    .merge(metaText)
-    .text((d)=> d.toFixed(2))
-    .attr("x", 180)
-    .attr("y", 90)
-    .attr("fill", "#cea731")
-    .style("font-size", 13)
-
-  metaText.exit().remove();
-
-  // vis.svgCol2.append("text")
-  //   .attr("class", "meta-rating")
-  //   .text(()=> selectedMovieAux['Metascore'])
-  //   .attr("x", 180)
-  //   .attr("y", 90)
-  //   .attr("fill", "black")
-  //   .style("font-size", 13)
 
   // Pie chart
   var pieData = {
-    'International': selectedMovieAux['International'],
-    'Domestic': selectedMovieAux['Domestic'],
+    'International': selectedSharkAux['International'],
+    'Domestic': selectedSharkAux['Domestic'],
   }
 
   var radius = 40;
 
   var piecolor = d3.scaleOrdinal()
     .domain(["International", "Domestic"])
-    .range(['#3268bd', '#A2CD48']);
+    .range(['#3268bd', '#fdfd71']);
 
   var pie = d3.pie()
     .value(function(d) {
@@ -580,7 +520,7 @@ function formatRevenue(num) {
   if (num === 0 || num === undefined) {
     return "No Data";
   }
-  return "$" + formatMillions(num);
+  return formatMillions(num);
 
 }
 
@@ -597,7 +537,7 @@ function mapCountryName(name) {
 }
 
 function clicked(i, vis) {
-  vis.selectedMovie = vis.allData[i];
+  vis.selectedShark = vis.allData[i];
   vis.updateDataSelection();
 }
 
