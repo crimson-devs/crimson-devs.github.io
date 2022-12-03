@@ -1,25 +1,31 @@
+// Globals
+var mapVis1;
+
 console.log('getting started on the final project!');
 
 let promises = [
-  d3.csv('data/activities-data.csv', d3.autoType),
-  d3.csv('data/attacks-fatalities.csv', d3.autoType),
-  d3.csv('data/odds.csv', d3.autoType),
-  d3.json('data/sharks.json'),
-  d3.json('data/world-110m.json'),
-  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'),
-  d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'),
-  d3.csv('data/shark-bite-type.csv', d3.autoType),
-  d3.csv('data/shark-population-decline.csv', d3.autoType),
-  d3.csv('data/shark-encounters.csv', d3.autoType),
+    d3.csv('data/activities-data.csv', d3.autoType),
+    d3.csv('data/attacks-fatalities.csv', d3.autoType),
+    d3.csv('data/odds.csv', d3.autoType),
+    d3.json('data/sharks.json'),
+    d3.json('data/world-110m.json'),
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'),
+    d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'),
+    d3.csv('data/shark-bite-type.csv', d3.autoType),
+    d3.csv('data/shark-population-decline.csv', d3.autoType),
+    d3.csv('data/shark-encounters.csv', d3.autoType),
+    d3.csv('data/map-data-all.csv'),
+    d3.json('data/slim-2.json'),
+    d3.csv('data/map-data-aux.csv'),
 ];
 
 Promise.all(promises)
-  .then(function (data) {
-    createVis(data);
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
+    .then(function (data) {
+        createVis(data);
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
 
 function createVis(data) {
     let barChartData = data[0]
@@ -39,14 +45,19 @@ function createVis(data) {
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
 
 
-  myMapVis = new MapVis('map-div', sharksData, geoData, data[9]);
-
-  //    lollipopChart = new LollipopChart('foo-div', lollipopChartData);
+    // myMapVis = new MapVis('map-div', sharksData, geoData, data[9]);
+    //     .defer(d3.csv, 'data/clean/map-data-all.csv')
+    //     .defer(d3.json, 'data/clean/world-110m.json')
+    //     .defer(d3.json, 'data/clean/slim-2.json')
+    //     .defer(d3.csv, 'data/clean/map-data-aux.csv')
+    mapVis1 = new MapVis('map-vis', data[10], data[4],  data[11], data[12]);
+    //    lollipopChart = new LollipopChart('foo-div', lollipopChartData);
 }
 
+
 function brushed() {
-  // Gets the extent of the current brush
-  let selectionRange = d3.brushSelection(d3.select('.brush').node());
+    // Gets the extent of the current brush
+    let selectionRange = d3.brushSelection(d3.select('.brush').node());
 
 }
 
