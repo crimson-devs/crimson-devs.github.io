@@ -54,6 +54,7 @@ img {
 
 #line-plot-user-selection {
     margin-left: 100px;
+    margin-bottom: 50px;
 }
 
 #opening-text {
@@ -528,6 +529,10 @@ img {
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
+}
+
+#shark-population-decline-plot {
+    margin-bottom: 100px;
 }
 
 
@@ -1205,7 +1210,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/assets/ocean-shark-touch.jpeg');
+/*    background-image: url('/assets/ocean-shark-touch.jpeg'); */
     background-size: cover;
 }
 

@@ -1,3 +1,5 @@
+// Note:  this code does not do anything... the circles are hard-coded in the index.html file
+
 // Set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 40, left: 100},
     width = 460 - margin.left - margin.right,

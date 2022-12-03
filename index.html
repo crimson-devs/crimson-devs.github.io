@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="js/liquidFillGauge.js"></script>
+
     <!-- CSS for Easy Scroll Dots -->
     <link rel="stylesheet" type="text/css" href="css/easyScrollDots.css" />
 
@@ -50,7 +54,7 @@
 
                         <div class="row step justify-content-center" data-step="">
                                 <div id="nj-incident-text-1" class="col-12">
-                                    In July 1916, five people were supposedly "attacked" by sharks while swimming along the coast of New Jersey.
+                                    In July 1916, five people were bitten by sharks while swimming along the coast of New Jersey.
                                 </div>
                         </div>
 
@@ -561,15 +565,9 @@
             <section id="scrolly-9c">
                 <article>
 
-                <div class="row step justify-content-center" data-step="1">
+                <div class="row step justify-content-center" data-step="">
                     <div id="shark-population-text-1" class="col-12">
                         Since the 1970s, shark populations have declined significantly.  The populations of some species have declined between <strong>60% to 90%</strong>!
-                    </div>
-                </div>
-
-                <div class="row step justify-content-center" data-step="1">
-                    <div id="shark-population-text-2" class="col-12">
-                        More than 1/3 of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
                     </div>
                 </div>
 
@@ -581,7 +579,55 @@
 
             </section>
 
+            <section id="scrolly-3">
+                <article>
 
+                    <div class="row step justify-content-center" data-step="">
+                        <div id="shark-population-text-2" class="col-12">
+                            A frighteningly large percentage of all large sharks have either been wiped out, face extinction, or are vulnerable to extinction.
+                        </div>
+                    </div>
+
+                </article>
+
+                    <div id="liquid-fill-gauge-div" class="sticky-thing-3">
+
+                        <svg id='liquid-fill-gauge' width='50%' height='500' onclick='fillGauge.update(NewValue());'></svg>
+
+                        <script>
+
+                            let fillGaugeConfig = liquidFillGaugeDefaultSettings();
+                            fillGaugeConfig.circleThickness = 0.15;
+                            fillGaugeConfig.circleColor = "#a1cae0";
+                            fillGaugeConfig.textColor = "crimson";
+                            fillGaugeConfig.waveTextColor = "#a1cae0";
+                            fillGaugeConfig.waveColor = "#a1cae0";
+                            fillGaugeConfig.textVertPosition = 0.8;
+                            fillGaugeConfig.waveAnimateTime = 1000;
+                            fillGaugeConfig.waveHeight = 0.05;
+                            fillGaugeConfig.waveAnimate = true;
+                            fillGaugeConfig.waveRise = false;
+                            fillGaugeConfig.waveHeightScaling = false;
+                            fillGaugeConfig.waveOffset = 0.25;
+                            fillGaugeConfig.textSize = 1.25;
+                            fillGaugeConfig.waveCount = 3;
+
+                            let fillGauge = loadLiquidFillGauge('liquid-fill-gauge', 33, fillGaugeConfig);
+
+                            function NewValue(){
+                                if(Math.random() > .5){
+                                    return Math.round(Math.random()*100);
+                                } else {
+                                    return (Math.random()*100).toFixed(1);
+                                }
+                            }
+
+                        </script>
+
+
+                    </div>
+
+            </section>
 
 
             <section id="scrolly-10">
@@ -774,7 +820,6 @@
             </div>
 
 
-
                     <div data-scroll-indicator-title="Our Team">
 
                         <div class="row justify-content-center">
@@ -782,6 +827,20 @@
                                     Our Team
                                 </div>
                         </div>
+
+                        <div class="row justify-content-center">
+
+                            <div id="ryan-photo" class="col-4">
+                                <img src="./assets/ryan_photo_1.jpg" alt="Photo of Ryan Abbate." width="50%">
+                            </div>
+                            <div id="mj-photo" class="col-4">
+                                photo goes here
+                            </div>
+                            <div id="karim-photo" class="col-4">
+                                photo goes here
+                            </div>
+                        </div>
+
 
                         <div class="row justify-content-center">
 
@@ -891,6 +950,7 @@
     <script src="js/lineChart.js"></script>
     <script src="js/populationDecline.js"></script>
     <script src="js/choropleth.js"></script>
+
     <script src="js/main.js"></script>
     <script src="js/countUp.js"></script>
 
@@ -922,6 +982,9 @@
     let main = document.querySelector('main');
     let scrolly_1 = main.querySelector('#scrolly-1');
     let sticky_1 = scrolly_1.querySelector('.sticky-thing-1');
+
+    let scrolly_3 = main.querySelector('#scrolly-3');
+    let sticky_3 = scrolly_3.querySelector('.sticky-thing-3');
 
     let scrolly_4 = main.querySelector('#scrolly-4');
     let sticky_4 = scrolly_4.querySelector('.sticky-thing-4');
@@ -976,6 +1039,9 @@
     let article_1 = scrolly_1.querySelector('article');
     let steps_1 = article_1.querySelectorAll('.step');
 
+    let article_3 = scrolly_3.querySelector('article');
+    let steps_3 = article_3.querySelectorAll('.step');
+
     let article_4 = scrolly_4.querySelector('article');
     let steps_4 = article_4.querySelectorAll('.step');
 
@@ -1027,6 +1093,7 @@
 
     // Initialize the Scrollama
     let scroller_1 = scrollama();
+    let scroller_3 = scrollama();
     let scroller_4 = scrollama();
     let scroller_5 = scrollama();
     let scroller_6 = scrollama();
@@ -1053,6 +1120,9 @@
         // remove is-active from all steps
         // then, add is-active to this step
         steps_1.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        steps_3.forEach(step => step.classList.remove('is-active'));
         el.classList.add('is-active');
 
         steps_4.forEach(step => step.classList.remove('is-active'));
@@ -1106,6 +1176,7 @@
 
         // update graphic based on step
         sticky_1.querySelector('p').innerText = el.dataset.step;
+        sticky_3.querySelector('p').innerText = el.dataset.step;
         sticky_4.querySelector('p').innerText = el.dataset.step;
         sticky_5.querySelector('p').innerText = el.dataset.step;
         sticky_6.querySelector('p').innerText = el.dataset.step;
@@ -1137,6 +1208,18 @@
 
         // set up resize event
         window.addEventListener('resize', scroller_1.resize);
+
+        scroller_3
+            .setup({
+                step: '#scrolly-3 article .step',
+                offset: 0.33,
+                debug: false
+            })
+            .onStepEnter(handleStepEnter)
+            .onStepEnter(sharkBitesCounter);
+
+        // set up resize event
+        window.addEventListener('resize', scroller_3.resize);
 
         scroller_4
             .setup({

@@ -145,7 +145,7 @@ class LineChart {
                     .html(`
                     <div style='border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px'>
                     <h3>${d.Year}</h3>
-                    <h4> ${d.Unprovoked.toLocaleString()} </h4>
+                    <h4> ${d[vis.metricType].toLocaleString()} </h4>
                     </div>
                                         
                     `)
