@@ -31,9 +31,13 @@ body {
     padding: 20px;
 }
 
+/*
 img {
     box-shadow: 0px 0px 5px lightgrey;
 }
+
+ */
+
 
 #animated-ocean-gif {
     background-image: url('/assets/ocean-video.gif');
@@ -526,6 +530,13 @@ img {
 }
 
 #shark-population-text-8 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#shark-population-text-9 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
