@@ -1,4 +1,3 @@
-// Globals
 var mapVis1;
 
 console.log('getting started on the final project!');
@@ -50,7 +49,6 @@ function createVis(data) {
     mapVis1 = new MapVis('map-vis', data[10], data[4],  data[11], data[12]);
 
 }
-
 
 function brushed() {
     // Gets the extent of the current brush

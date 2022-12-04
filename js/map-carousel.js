@@ -10,5 +10,5 @@ $('.poster').hover(function() {
 
     // turn off shadow for all other posters
     $('.poster').not(this).removeClass("shadowOn");
-    clicked(sharkId, mapVis);
+    clicked(sharkId, mapVis1);
 })

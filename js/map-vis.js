@@ -31,7 +31,7 @@ MapVis.prototype.initVis = function() {
     'left': 40,
     'right': 40
   };
-  vis.width = 1100 - vis.margin.left - vis.margin.right;
+  vis.width = screen.width - vis.margin.left - vis.margin.right;
   vis.height = 100;
   vis.svg = makeSvg(vis, 'map-vis');
 
@@ -108,8 +108,6 @@ MapVis.prototype.initVis = function() {
     initial_value: 5,
   }
 
-  $(".stars-imdb").rate(options);
-  $(".stars-meta").rate(options2);
 
   vis.mapGroup = vis.svg.append("g")
     .attr('class', 'map');
@@ -117,13 +115,13 @@ MapVis.prototype.initVis = function() {
   vis.svg.append("g")
     .append("text")
     .attr("class", "legend-text")
-    .text('1 in How Many Odds')
+    .text('Number of Attacks')
     .attr("x", 23)
     .attr("y", -10)
     .attr("fill", "black")
     .style("font-size", 15);
 
-  var pieXOffset = 270;
+  var pieXOffset = 170;
   var pieYOffset = 60;
   vis.pieGroup = vis.svgCol2.append("g")
     .attr("class", "pie-group")
@@ -146,28 +144,10 @@ MapVis.prototype.wrangleData = function() {
   })
 
   vis.auxData.forEach((d) => {
-    d.imdbRating = +d.imdbRating;
-    d.Metascore = +d.Metascore;
-    d.Year = +d.Year;
-    d.Domestic = +d.Domestic;
-    d.International = +d.International;
+    d.Provoked = +d.Provoked;
+    d.Unprovoked = +d.Unprovoked;
   })
 
-  vis.sharkYearRangeArr = [
-    [],
-    [],
-    []
-  ];
-
-  vis.auxData.forEach((d) => {
-    if (d.Year <= 2013) {
-      vis.sharkYearRangeArr[0].push(d.Title);
-    } else if (d.Year <= 2017) {
-      vis.sharkYearRangeArr[1].push(d.Title);
-    } else {
-      vis.sharkYearRangeArr[2].push(d.Title);
-    }
-  });
 
   vis.updateDataSelection();
   vis.updateVis();
@@ -243,10 +223,10 @@ MapVis.prototype.updateVis = function() {
       vis.tooltip.transition()
         .duration(800)
         .style("opacity", .8);
-      var txt = vis.idToCountry[d.id] + "<br>" + formatRevenue(vis.idToRevenue[d.id]);
+      var txt = vis.idToCountry[d.id] + "<br>" + vis.idToRevenue[d.id];
       vis.tooltip.html(txt)
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY - 28) + "px");
+        .style("left", (d3.pageX) + "px")
+        .style("top", (d3.pageY - 28) + "px");
     })
     .on("mouseout", (d) => {
       vis.tooltip.transition()
@@ -330,20 +310,20 @@ MapVis.prototype.updateVis = function() {
 
   // Col 2 Charts
   var selectedSharkAux = vis.auxData.filter((d) => {
-    return vis.selectedShark.Name === d.Title;
+    return vis.selectedShark.Name === d.Name;
   })[0];
 
   // Pie chart
   var pieData = {
-    'International': selectedSharkAux['International'],
-    'Domestic': selectedSharkAux['Domestic'],
+    'Provoked': selectedSharkAux['Provoked'],
+    'Unprovoked': selectedSharkAux['Unprovoked'],
   }
 
-  var radius = 40;
-
+  var radius = 60;
+  var pieColors = ['#bd3257', '#a4fd71']
   var piecolor = d3.scaleOrdinal()
-    .domain(["International", "Domestic"])
-    .range(['#3268bd', '#fdfd71']);
+    .domain(["Provoked", "Unprovoked"])
+    .range(pieColors);
 
   var pie = d3.pie()
     .value(function(d) {
@@ -374,7 +354,7 @@ MapVis.prototype.updateVis = function() {
     .enter()
     .append('text')
     .text(function(d) {
-      return d.data.value + '%';
+      return d.data.value;
     })
     .attr("transform", function(d) {
       var centroid = arcGenerator.centroid(d);
@@ -386,8 +366,7 @@ MapVis.prototype.updateVis = function() {
     .style("font-size", 12)
     .style('fill', 'white')
 
-  var pieLegends = ['Domestic', 'International', ];
-  var pieColors = ['#A2CD48', '#3268bd'];
+  var pieLegends = ['Unprovoked', 'Provoked', ];
   var legendPie = vis.svgCol2.selectAll(".pie-legend")
     .data(pieColors);
 
@@ -451,7 +430,7 @@ MapVis.prototype.updateVis = function() {
       return 40;
     })
     .attr("width", function(d) {
-      return d.Gross / 3000000;
+      return d.Gross ;
     })
     .attr("height", function(d) {
       return 15;
@@ -498,9 +477,8 @@ MapVis.prototype.updateVis = function() {
       return 150 + i * 20;
     })
     .text((d) => {
-      return formatMillions(d.Gross);
+      return d.Gross;
     })
-    // .attr("fill", "gray")
     .attr("fill", (d) => {
       return vis.color(d.Gross);
     })
@@ -508,25 +486,10 @@ MapVis.prototype.updateVis = function() {
   values.exit().remove();
 }
 
-function createRange(maxVal, numCounts) {
-  var ret = [0];
-  for (var i = 1; i < numCounts; i++) {
-    ret.push(i * maxVal / numCounts);
-  }
-  return ret;
-}
-
-function formatRevenue(num) {
-  if (num === 0 || num === undefined) {
-    return "No Data";
-  }
-  return formatMillions(num);
-
-}
 
 function mapCountryName(name) {
   var mapping = {
-    'United States of America': 'USA',
+    'Provoked': 'USA',
     'United Kingdom of Great Britain and Northern Ireland': 'UK',
     'Korea, Republic of': 'South Korea'
   };
@@ -541,18 +504,3 @@ function clicked(i, vis) {
   vis.updateDataSelection();
 }
 
-function formatMillions(num) {
-  num = +num;
-  if (num >= 1000000000) {
-    num1 = Math.floor(num / 1000000000);
-    num2 = Math.floor(num % 1000000000 / 1000000);
-    return num1 + "." + num2 + "B";
-  } else if (num >= 1000000) {
-    num = Math.floor(num / 1000000);
-    return num + "M";
-  } else if (num >= 1000) {
-    num = Math.floor(num / 1000);
-    return num + "K";
-  }
-  return num;
-}

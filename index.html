@@ -469,35 +469,78 @@
 
         <!-- Story Scrolling Dot 7 Title -->
         <div data-scroll-indicator-title="Shark Attack">
+            <div id="map-sec" style="height: 1000px" class="section global-background col-12" data-step="1">
+                <div class="container box box2" id="map-container">
+                    <center><h3 style="position:relative">Shark Attacks Around The World!! </h3></center>
+                    <div id="map-vis" class="vis-container"></div>
 
+                    <!-- carousel code adapted from: https://www.codeply.com/go/HDu8lT7NxJ -->
+                    <div class="container posterContainer text-center my-3">
+                        <div id="posterCarousel" class="carousel slide w-100" data-ride="carousel">
+                            <!-- carousel indicator code adapted from: https://mdbootstrap.com/snippets/jquery/temp/1496800?action=prism_export -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#posterCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#posterCarousel" data-slide-to="1"></li>
+                            </ol>
+
+                            <div class="carousel-inner w-100" role="listbox">
+                                <div class="carousel-item row no-gutters active">
+                                    <div class="col-2 float-left"><img data-shark="0" class="img-fluid poster"
+                                                                       src="img/Bathing.jpg" alt="Bathing" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="1" class="img-fluid poster"
+                                                                       src="img/Diving.jpg" alt="Driving" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="2" class="img-fluid poster"
+                                                                       src="img/Fishing.png" alt="Fishing" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="3" class="img-fluid poster"
+                                                                       src="img/Floating.png" alt="Floating" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="4" class="img-fluid poster"
+                                                                       src="img/Kayaking.jpg" alt="Kayaking" width=140
+                                                                       height=180></div>
+
+                                </div>
+                                <div class="carousel-item row no-gutters">
+                                    <div class="col-2 float-left"><img data-shark="5" class="img-fluid poster"
+                                                                       src="img/Paddling.jpg" alt="Paddling" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="6" class="img-fluid poster"
+                                                                       src="img/Playing.png" alt="Playing" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="7" class="img-fluid poster"
+                                                                       src="img/Surfing.png" alt="Surfing" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="8" class="img-fluid poster"
+                                                                       src="img/Swimming.png" alt="Swimming" width=140
+                                                                       height=180></div>
+                                    <div class="col-2 float-left"><img data-shark="9" class="img-fluid poster"
+                                                                       src="img/Wading.jpg" alt="Wading" width=140
+                                                                       height=180></div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#posterCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#posterCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <!-- Story Scrolling Dot 7 Text -->
             <article>
 
-                <!-- Story Scrolling Dot 7 Text 1 -->
-                <div class="row step justify-content-center" data-step="">
-                    <div id="line-plot-text-3" class="col-12">
-                        Sharks are marine mammals, so obviously the attack involved being close to the water.
-                    </div>
-
-                <!-- Story Scrolling Dot 7 Text 2 -->
-                    <div id="shark-bites-misconception-text-1" class="col-12">
-                        Activities People Were Doing When Attacked By A Shark.
-                    </div>
-
-                <!-- Story Scrolling Dot 7 Text 3 -->
-                    <div id="shark-fatalities-text-1" class="col-12">
-                        The visualization provides us with an insight that the attack was during Surfing and Swimming
-                        more than 50% of the time.
-                    </div>
-                </div>
 
             </article>
 
         </div>
 
-            <!-- Story Scrolling Dot 7 Media -->
-            <div id="activities-bar-chart" class="sticky-thing-7">
-            </div>
 
     </section>
 
@@ -817,54 +860,6 @@
         <!-- placeholder to enable proper scrolling when user navigates near end of webpage -->
     </section>
 
-    <div id="map-sec" style="height: 800px" class="section global-background col-12">
-        <div class="container box box2" id="map-container">
-            <h3 style="position:absolute;left:32%;top:5%;margin-bottom:0px;margin-top:0px;">Odds of Shark Attack, When Doing these Activities Globally? </h3>
-
-
-            <div id="map-vis" class="vis-container"></div>
-
-            <!-- carousel code adapted from: https://www.codeply.com/go/HDu8lT7NxJ -->
-            <div class="container posterContainer text-center my-3">
-                <div id="posterCarousel" class="carousel slide w-100" data-ride="carousel">
-                    <!-- carousel indicator code adapted from: https://mdbootstrap.com/snippets/jquery/temp/1496800?action=prism_export -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#posterCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#posterCarousel" data-slide-to="1"></li>
-                        <li data-target="#posterCarousel" data-slide-to="2"></li>
-                        <li data-target="#posterCarousel" data-slide-to="3"></li>
-                    </ol>
-
-                    <div class="carousel-inner w-100" role="listbox">
-                        <div class="carousel-item row no-gutters active">
-                            <div class="col-2 float-left"><img data-shark="0" class="img-fluid poster" src="img/Bathing.jpg" alt="Bathing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="1" class="img-fluid poster" src="img/Diving.jpg" alt="Driving" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="2" class="img-fluid poster" src="img/Fishing.png" alt="Fishing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="3" class="img-fluid poster" src="img/Floating.png" alt="Floating" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="4" class="img-fluid poster" src="img/Kayaking.jpg" alt="Kayaking" width=140 height=180></div>
-
-                        </div>
-                        <div class="carousel-item row no-gutters">
-                            <div class="col-2 float-left"><img data-shark="5" class="img-fluid poster" src="img/Paddling.jpg" alt="Paddling" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="6" class="img-fluid poster" src="img/Playing.png" alt="Playing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="7" class="img-fluid poster" src="img/Surfing.png" alt="Surfing" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="8" class="img-fluid poster" src="img/Swimming.png" alt="Swimming" width=140 height=180></div>
-                            <div class="col-2 float-left"><img data-shark="9" class="img-fluid poster" src="img/Wading.jpg" alt="Wading" width=140 height=180></div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#posterCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#posterCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
     </div>
 </main>
 
