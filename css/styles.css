@@ -11,7 +11,7 @@ a:hover {
 html{scroll-behavior: smooth}
 
 .blink {
-    animation: blink 3s infinite;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
