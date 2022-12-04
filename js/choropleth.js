@@ -3,6 +3,7 @@
 * * * * * * * * * * * * * */
 
 class MapGlobe {
+
     constructor(parentElement, sharksData, geoData, data) {
         this.parentElement = parentElement;
         this.geoData = geoData;
@@ -23,9 +24,11 @@ class MapGlobe {
             document.getElementById(vis.parentElement).getBoundingClientRect().width -
             vis.margin.left -
             vis.margin.right;
+
         vis.height =
             document.getElementById(vis.parentElement).getBoundingClientRect()
                 .height -
+
             vis.margin.top -
             vis.margin.bottom;
 
@@ -43,7 +46,8 @@ class MapGlobe {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Shark Attacks WorldWide')
+            .text('Shark Attacks Worldwide')
+            .style('font-size', 25)
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
@@ -236,7 +240,8 @@ class MapGlobe {
                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
                             <h3>${d.properties.name}<h3>      
                          
-                            <h4> Fatal Attacks: ${
+
+                            <h4> Fatal Bites: ${
                     vis.data.filter(
                         (item) =>
                             item.fatal === 'Yes' &&
@@ -246,7 +251,9 @@ class MapGlobe {
                                 ].name.toLowerCase()
                     ).length
                 }</h4>    
-                             <h4>Non Fatal Attacks: ${
+
+                             <h4>Non-Fatal Bites: ${
+
                     vis.data.filter(
                         (item) =>
                             item.fatal === 'No' &&
@@ -256,7 +263,9 @@ class MapGlobe {
                                 ].name.toLowerCase()
                     ).length
                 }</h4>  
-                                 <h4> Total Attacks: ${
+
+                                 <h4> Total Bites: ${
+
                     vis.data.filter(
                         (item) =>
                             (item.fatal === 'Yes' ||

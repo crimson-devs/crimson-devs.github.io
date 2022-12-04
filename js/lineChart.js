@@ -213,7 +213,7 @@ class LineChart {
             .attr('fill', 'crimson')
             .attr('stroke', '#456983')
             .attr('cx', function(d) { return vis.xScale(d.Year); })
-            .attr('cy', function(d) { return vis.yScale(d.Fatalities); })
+            .attr('cy', function(d) { return vis.yScale(d[vis.metricType]); })
             .attr('r', 4);
 
 

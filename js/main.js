@@ -16,6 +16,7 @@ let promises = [
     d3.csv('data/my_all_countries.csv'),
     d3.json('data/slim-2.json'),
     d3.csv('data/my_all_encounter.csv'),
+
 ];
 
 Promise.all(promises)
@@ -42,7 +43,6 @@ function createVis(data) {
     barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they were bitten by a shark?');
     lineChart = new LineChart('line-plot-div', lineChartData, 'Human Fatalities Since 1900');
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
-
 
     myMapVis = new MapGlobe('map-div', sharksData, geoData, data[9]);
 
