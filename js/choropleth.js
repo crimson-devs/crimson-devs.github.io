@@ -41,8 +41,10 @@ class MapVis {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Shark Attacks Worldwide')
+            .text('Shark Bites Worldwide')
             .style('font-size', 25)
+            .style('font-weight', 600)
+            .style('fill', '#456983')
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
@@ -235,7 +237,7 @@ class MapVis {
                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
                             <h3>${d.properties.name}<h3>      
                          
-                            <h4> Fatal Bites: ${
+                            <h5> Fatal Bites: ${
                     vis.data.filter(
                         (item) =>
                             item.fatal === 'Yes' &&
@@ -244,8 +246,8 @@ class MapVis {
                                 d.properties.name
                                 ].name.toLowerCase()
                     ).length
-                }</h4>    
-                             <h4>Non-Fatal Bites: ${
+                }</h5>    
+                             <h5>Non-Fatal Bites: ${
                     vis.data.filter(
                         (item) =>
                             item.fatal === 'No' &&
@@ -254,8 +256,8 @@ class MapVis {
                                 d.properties.name
                                 ].name.toLowerCase()
                     ).length
-                }</h4>  
-                                 <h4> Total Bites: ${
+                }</h5>  
+                                 <h5> Total Bites: ${
                     vis.data.filter(
                         (item) =>
                             (item.fatal === 'Yes' ||
@@ -265,7 +267,7 @@ class MapVis {
                                 d.properties.name
                                 ].name.toLowerCase()
                     ).length
-                }</h4>                
+                }</h5>                
                         </div>`);
             })
             .on('mouseout', function (event, d) {

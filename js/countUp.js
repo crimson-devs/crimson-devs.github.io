@@ -32,9 +32,9 @@ humanFatalitiesCounter
 const sharkFatalitiesCounter = new countUp.CountUp('shark-fatalities-counter-annually', 100,
                                                         { enableScrollSpy: true,
                                                           duration: 10,
-                                                          delay: 3,
+                                                          delay: 1,
                                                           useEasing: true,
-                                                          scrollSpyDelay: 5000,
+                                                          scrollSpyDelay: 3000,
                                                           prefix: 'Humans kill <br>',
                                                           suffix: ' million sharks annually.',
                                                           scrollSpyOnce: true

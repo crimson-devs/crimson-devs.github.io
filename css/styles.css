@@ -62,6 +62,7 @@ img {
     font-family: Georgia;
     font-size: 85px;
     margin-top: 180px;
+    text-align: center;
 }
 
 #jaws-text-1 {
@@ -87,7 +88,7 @@ img {
 #project-title-text-1 {
     color: #456983;
     font-size: 70px;
-    font-family: Arial;
+    font-family: Georgia;
     padding-top: 100px;
 }
 
@@ -558,23 +559,23 @@ img {
 }
 
 #actions-text-1 {
-    color: #456983;
+    color: white;
     font-size: 50px;
-    font-family: Arial;
+    font-family: Georgia;
     padding: 30px;
 }
 
 #actions-text-2 {
     color: #456983;
     font-size: 50px;
-    font-family: Arial;
+    font-family: Georgia;
     padding: 30px;
 }
 
 #actions-text-3 {
-    color: #456983;
+    color: white;
     font-size: 50px;
-    font-family: Arial;
+    font-family: Georgia;
     padding: 30px;
 }
 
@@ -654,6 +655,7 @@ img {
     font-size: 50px;
     font-family: Arial;
     padding-top: 100px;
+    padding-bottom: 40px;
     padding-left: 30px;
 }
 
@@ -663,6 +665,7 @@ img {
     font-family: Arial;
     padding-top: 20px;
     padding-left: 30px;
+    text-align: center;
 }
 
 #karim-name {
@@ -671,6 +674,7 @@ img {
     font-family: Arial;
     padding-top: 20px;
     padding-left: 30px;
+    text-align: center;
 }
 
 #mj-name {
@@ -679,6 +683,7 @@ img {
     font-family: Arial;
     padding-top: 20px;
     padding-left: 30px;
+    text-align: center;
 
 }
 
@@ -687,6 +692,7 @@ img {
     font-size: 20px;
     font-family: Arial;
     padding-left: 30px;
+    text-align: center;
 }
 
 #mj-text-1 {
@@ -694,6 +700,7 @@ img {
     font-size: 20px;
     font-family: Arial;
     padding-left: 30px;
+    text-align: center;
 }
 
 #karim-text-1 {
@@ -701,6 +708,7 @@ img {
     font-size: 20px;
     font-family: Arial;
     padding-left: 30px;
+    text-align: center;
 }
 
 
@@ -1290,6 +1298,7 @@ article {
     align-items: center;
     justify-content: center;
     background-size: cover;
+    margin-bottom: 100px;
 }
 
 .sticky-thing-7 p {
@@ -1524,7 +1533,7 @@ article {
     position: sticky;
     width: 100%;
     margin: 0;
-    background-color: #8a8a8a;
+    background-color: white;
     z-index: 0;
     top: 12.5vh;
     height: 75vh;
@@ -1647,7 +1656,7 @@ article {
     background-color: white;
     z-index: 0;
     top: 12.5vh;
-    height: 75vh;
+    height: 60vh;
     /* Center everything inside */
     display: flex;
     align-items: center;
