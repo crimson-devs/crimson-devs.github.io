@@ -1,8 +1,9 @@
 /* * * * * * * * * * * * * *
-*          MapVis          *
+*          MapGlobe          *
 * * * * * * * * * * * * * */
 
-class MapVis {
+class MapGlobe {
+
     constructor(parentElement, sharksData, geoData, data) {
         this.parentElement = parentElement;
         this.geoData = geoData;
@@ -23,7 +24,11 @@ class MapVis {
             document.getElementById(vis.parentElement).getBoundingClientRect().width -
             vis.margin.left -
             vis.margin.right;
-        vis.height = 700 -
+
+        vis.height =
+            document.getElementById(vis.parentElement).getBoundingClientRect()
+                .height -
+
             vis.margin.top -
             vis.margin.bottom;
 
@@ -235,6 +240,7 @@ class MapVis {
                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
                             <h3>${d.properties.name}<h3>      
                          
+
                             <h4> Fatal Bites: ${
                     vis.data.filter(
                         (item) =>
@@ -245,7 +251,9 @@ class MapVis {
                                 ].name.toLowerCase()
                     ).length
                 }</h4>    
+
                              <h4>Non-Fatal Bites: ${
+
                     vis.data.filter(
                         (item) =>
                             item.fatal === 'No' &&
@@ -255,7 +263,9 @@ class MapVis {
                                 ].name.toLowerCase()
                     ).length
                 }</h4>  
+
                                  <h4> Total Bites: ${
+
                     vis.data.filter(
                         (item) =>
                             (item.fatal === 'Yes' ||
