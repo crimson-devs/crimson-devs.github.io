@@ -39,7 +39,7 @@ function createVis(data) {
     let geoData = data[5]
     let sharksData = data[3]
 
-    // Instantiate the visualizations
+    // Instantiate the Visualizations
     barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they were bitten by a shark?');
     lineChart = new LineChart('line-plot-div', lineChartData, 'Human Fatalities Since 1900');
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
@@ -48,7 +48,7 @@ function createVis(data) {
     myMapVis = new MapGlobe('map-div', sharksData, geoData, data[9]);
 
     mapVis1 = new MapVis('map-vis', data[10], data[4],  data[11], data[12]);
-    //    lollipopChart = new LollipopChart('foo-div', lollipopChartData);
+
 }
 
 
@@ -69,18 +69,5 @@ function updateMetric() {
 
     console.log('logging metric type', metricType);
 
-//            vis.data.sort( ( a, b) => b.Year - a.Year);
 }
 
-//d3.csv('data/activities-data.csv', d3.autoType).then(function(data) {
-
-//    console.table(data)
-
-//    // Instantiate the visualizations
-//    barChart = new BarChart('activities-bar-chart', data)
-
-//lineChart = new LineChart('line-plot-div', data)
-
-//    console.log(data)
-
-//})
