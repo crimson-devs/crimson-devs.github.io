@@ -44,6 +44,106 @@ img {
     margin-bottom: 5em;
 }
 
+#dot-2-text-1 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#dot-2-text-2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+#dot-2-text-3 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia;
+    padding: 30px;
+}
+
+.sticky-thing-1 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+}
+
+
+.sticky-thing-1 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-2 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/jaws-image.jpg');
+    background-size: cover;
+}
+
+.sticky-thing-2 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.sticky-thing-3 {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    z-index: 0;
+    top: 12.5vh;
+    height: 75vh;
+    /* Center everything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/ocean-shark-touch.jpeg');
+    background-size: cover;
+}
+
+.sticky-thing-3 p {
+    padding: 1rem;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+
+
+
+
+
+
 .line {
     fill: none;
 /*    stroke: #456983; */
@@ -132,12 +232,13 @@ img {
     padding: 30px;
 }
 
-#shark-bites-misconception-text-1 {
-    color: white;
-    font-size: 50px;
-    font-family: Georgia;
-    padding: 30px;
-}
+
+
+
+
+
+
+
 
 #shark-bites-misconception-text-2 {
     color: white;
@@ -724,7 +825,7 @@ img {
 
 
 #map-div {
-    height: 400px;
+    height: 700px;
 }
 
 #outro {
@@ -1140,78 +1241,10 @@ article {
     max-width: 50rem;
 }
 
-.sticky-thing-1 {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    margin: 0;
-    background-color: white;
-    z-index: 0;
-    top: 12.5vh;
-    height: 75vh;
-    /* Center everything inside */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-/*    background-image: url('/assets/philadelphia-inquirer.JPG'); */
-    background-size: cover;
 
-}
 
-.sticky-thing-1 p {
-    padding: 1rem;
-    font-size: 8rem;
-    font-weight: 900;
-    color: #fff;
-}
 
-.sticky-thing-2 {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    margin: 0;
-    background-color: white;
-    z-index: 0;
-    top: 12.5vh;
-    height: 75vh;
-    /* Center everything inside */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/assets/jaws-image.jpg');
-    background-size: cover;
-}
 
-.sticky-thing-2 p {
-    padding: 1rem;
-    font-size: 8rem;
-    font-weight: 900;
-    color: #fff;
-}
-
-.sticky-thing-3 {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    margin: 0;
-    background-color: white;
-    z-index: 0;
-    top: 12.5vh;
-    height: 75vh;
-    /* Center everything inside */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/assets/ocean-shark-touch.jpeg');
-    background-size: cover;
-}
-
-.sticky-thing-3 p {
-    padding: 1rem;
-    font-size: 8rem;
-    font-weight: 900;
-    color: #fff;
-}
 
 .sticky-thing-4 {
     position: -webkit-sticky;

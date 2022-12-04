@@ -115,7 +115,7 @@ class PopulationDecline {
 
         // update the domains
         vis.xScale.domain(vis.data.map(function (d) { return d.species; }));
-        vis.yScale.domain( [ 0, 100 ] );
+        vis.yScale.domain( [ 100, 0 ] );
 
         // draw the bars
         vis.bars = vis.svg.selectAll('.bar')
@@ -128,7 +128,9 @@ class PopulationDecline {
             .append('rect')
             .attr('class', 'bar')
             .attr('x', d => vis.xScale(d.species))
-            .attr('y', d => vis.yScale(vis.height))
+//            .attr('y', d => vis.yScale(vis.height))
+//            .attr('y', d => vis.yScale(0))
+            .attr('y', d => d)
             .attr('width', vis.xScale.bandwidth())
             .on('mouseover', function(event, d) {
                 d3.select(this)
@@ -203,12 +205,12 @@ class PopulationDecline {
             .attr('class', 'text')
             .attr('text-anchor', 'middle')
             .attr('x', d => vis.xScale(d.species) + 27)
-            .attr('y', d => vis.yScale(d.plotValue) - 10)
+            .attr('y', d => vis.yScale(100- d.plotValue) + 20)
             .text( function (d) {
                 return '-' + (100 - d.plotValue) + '%';
             })
             .style('font-weight', 600)
-            .style('fill', 'red')
+            .style('fill', 'crimson')
 
     }
 

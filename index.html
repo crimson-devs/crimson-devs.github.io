@@ -29,7 +29,7 @@
         <div class="container-fluid zero-padding">
             <!-- Story Scrolling Dot Intro -->
             <div data-scroll-indicator-title="Introduction">
-                <!-- Animated ocean header GIF -->
+                <!-- Animated Ocean Header GIF -->
                 <div class="row ">
                     <div id="animated-ocean-gif" class="col-12">
 
@@ -46,6 +46,7 @@
                                 <a href="#nj-incident-text-1"><span></span>Scroll</a>
                             </section>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -90,7 +91,7 @@
     </section>
 
     <!-- Story Scrolling Dot 2 -->
-    <section id="scrolly-4">
+    <section id="scrolly-2">
 
         <!-- Dot 2 Title -->
         <div data-scroll-indicator-title="Media Hysteria">
@@ -100,7 +101,7 @@
 
                 <!-- Dot 2 Text 1 -->
                 <div class="row step justify-content-center" data-step="">
-                    <div id="shark-bites-misconception-text-1" class="col-12">
+                    <div id="dot-2-text-1" class="col-12">
                         Since then, the media and popular culture have portrayed sharks as
                         cold-blooded predators with an insatiable appetite for human flesh.
                     </div>
@@ -108,7 +109,7 @@
 
                 <!-- Dot 2 Text 2 -->
                 <div class="row step justify-content-center" data-step="">
-                    <div id="shark-bites-misconception-text-1" class="col-12">
+                    <div id="dot-2-text-2" class="col-12">
 
                         "There is a creature alive today, which has survived millions of years of evolution...
                          without change, without passion, without logic... It lives to kill.
@@ -118,7 +119,7 @@
 
                 <!-- Dot 2 Text 3 -->
                 <div class="row step justify-content-center" data-step="">
-                    <div id="shark-bites-misconception-text-1" class="col-12">
+                    <div id="dot-2-text-3" class="col-12">
                         From the movie, Jaws (1975).
                     </div>
                 </div>
@@ -128,9 +129,9 @@
         </div>
 
         <!-- Dot 2 Media -->
-        <div class="sticky-thing-1">
+        <div class="sticky-thing-2">
             <div>
-                <img src="./assets/jaws-image.jpg" alt=" Word Cloud">
+                <img src="./assets/jaws-image.jpg" alt=" Jaws">
             </div>
         </div>
 
@@ -456,13 +457,28 @@
 
 
     <section id="scrolly-8b">
-        <article>
+        <div data-scroll-indicator-title="Activities">
+            <article>
 
-        </article>
+                <div class="row step justify-content-center" data-step="">
+                    <div id="activities-text-1" class="col-12">
+                        What were people doing when they were bitten by a shark?
+                    </div>
+
+                    <div id="activities-text-2" class="col-12">
+                        More than <strong>50%</strong> of all people bitten by a shark were swimming or surfing.
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+            <div id="activities-bar-chart" class="sticky-thing-7">
+            </div>
 
     </section>
-
-
 
     <!-- Story Scrolling Dot 7 -->
     <section id="scrolly-9a">
@@ -471,7 +487,7 @@
         <div data-scroll-indicator-title="Shark Attack">
             <div id="map-sec" style="height: 1000px" class="section global-background col-12" data-step="1">
                 <div class="container box box2" id="map-container">
-                    <center><h3 style="position:relative">Shark Attacks Around The World!! </h3></center>
+                    <center><h3 style="position:relative">Activities: Provoked vs. UnProvoked Attacks </h3></center>
                     <div id="map-vis" class="vis-container"></div>
 
                     <!-- carousel code adapted from: https://www.codeply.com/go/HDu8lT7NxJ -->
@@ -643,22 +659,20 @@
                         </ul>
                     </div>
 
-                    <!-- Dot 9 Text 3 -->
-                    <div id="shark-fatalities-seconds" class="col-12">
-                        Humans Kill More Sharks, than Sharks Kill Humans.
-                    </div>
 
                     <!-- Dot 9 Text 4 -->
                     <div id="shark-fatalities-seconds" class="col-12">
-                        As a result, they "predators" become the prey and are endangered.
+                        Humans Kill More Sharks, than Sharks Kill Humans.
+                        The "predators" become the prey and are endangered.
                     </div>
-
-                </div>
 
             </article>
 
-
         </div>
+
+            <div id="shark-population-decline-plot" class="sticky-thing-9c">
+                <p></p>
+            </div>
 
     </section>
 
@@ -946,8 +960,8 @@
     let scrolly_1 = main.querySelector('#scrolly-1');
     let sticky_1 = scrolly_1.querySelector('.sticky-thing-1');
 
-    let scrolly_4 = main.querySelector('#scrolly-4');
-    let sticky_4 = scrolly_4.querySelector('.sticky-thing-4');
+    let scrolly_2 = main.querySelector('#scrolly-2');
+    let sticky_2 = scrolly_2.querySelector('.sticky-thing-2');
 
     let scrolly_5 = main.querySelector('#scrolly-5');
     let sticky_5 = scrolly_5.querySelector('.sticky-thing-5');
@@ -997,8 +1011,8 @@
     let article_1 = scrolly_1.querySelector('article');
     let steps_1 = article_1.querySelectorAll('.step');
 
-    let article_4 = scrolly_4.querySelector('article');
-    let steps_4 = article_4.querySelectorAll('.step');
+    let article_2 = scrolly_2.querySelector('article');
+    let steps_2 = article_2.querySelectorAll('.step');
 
     let article_5 = scrolly_5.querySelector('article');
     let steps_5 = article_5.querySelectorAll('.step');
@@ -1048,6 +1062,7 @@
 
     // Initialize the Scrollama
     let scroller_1 = scrollama();
+    let scroller_2 = scrollama();
     let scroller_4 = scrollama();
     let scroller_5 = scrollama();
     let scroller_6 = scrollama();
@@ -1159,9 +1174,9 @@
         // set up resize event
         window.addEventListener('resize', scroller_1.resize);
 
-        scroller_4
+        scroller_2
             .setup({
-                step: '#scrolly-4 article .step',
+                step: '#scrolly-2 article .step',
                 offset: 0.33,
                 debug: false
             })
