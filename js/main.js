@@ -40,7 +40,7 @@ function createVis(data) {
     let sharksData = data[3]
 
     // Instantiate the Visualizations
-    barChart = new BarChart('activities-bar-chart', barChartData, 'What were people doing when they were bitten by a shark?');
+    barChart = new BarChart('activities-bar-chart', barChartData, 'Top 10 Activities for Shark Bites');
     lineChart = new LineChart('line-plot-div', lineChartData, 'Human Fatalities Since 1900');
     populationDeclineChart = new PopulationDecline('shark-population-decline-plot', populationDeclineData, 'Declines in Shark Populations Since 1985')
 

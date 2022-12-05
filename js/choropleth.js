@@ -11,7 +11,7 @@ class MapGlobe {
         this.data = data;
 
         // define colors
-        this.colors = ['#d1fdc7', '#66c239', 'rgba(50,154,14,0.93)', '#156004'];
+        this.colors = ['#f05c79', '#ec3257', 'rgb(220,20,60)', '#b21031'];
 
         this.initVis();
     }
@@ -46,7 +46,7 @@ class MapGlobe {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Shark Attacks Worldwide')
+            .text('Fatal vs Non-Fatal Shark Bites Worldwide')
             .style('font-size', 25)
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
@@ -97,7 +97,7 @@ class MapGlobe {
         vis.projection = d3
             .geoOrthographic() // d3.geoStereographic()
             .translate([vis.width / 2, vis.height / 2])
-            .scale(249.5 * vis.zoom) // 249.5 is default. so multiply that by your zoom
+            .scale(255 * vis.zoom) // 249.5 is default. so multiply that by your zoom
             .rotate(vis.rotate);
 
         // path provider
@@ -107,16 +107,16 @@ class MapGlobe {
             .append('path')
             .datum({ type: 'Sphere' })
             .attr('class', 'graticule')
-            .attr('fill', '#ADDEFF')
-            .attr('stroke', 'rgba(129,129,129,0.35)')
+            .attr('fill', '#456983')
+            .attr('stroke', 'rgb(253,253,113)')
             .attr('d', vis.path);
 
         vis.svg
             .append('path')
             .datum(d3.geoGraticule())
             .attr('class', 'graticule')
-            .attr('fill', '#ADDEFF')
-            .attr('stroke', 'rgba(129,129,129,0.35)')
+            .attr('fill', '#456983')
+            .attr('stroke', 'rgb(69,105,131)')
             .attr('d', vis.path);
 
         // Convert TopoJSON to GeoJSON (target object = 'states')

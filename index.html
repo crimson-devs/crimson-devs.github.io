@@ -3,6 +3,7 @@
 
 <!-- Contains all metadata about the document. -->
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,78 +22,77 @@
     <!-- CSS for Easy Scroll Dots -->
     <link rel="stylesheet" type="text/css" href="css/easyScrollDots.css"/>
 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="js/liquidFillGauge.js"></script>
+
 </head>
 
 <!-- Primary Contents of the Web Page -->
 <body>
+
     <main>
+
+        <!-- Intro Media -->
         <div class="container-fluid zero-padding">
-            <!-- Story Scrolling Dot Intro -->
-            <div data-scroll-indicator-title="Introduction">
-                <!-- Animated Ocean Header GIF -->
-                <div class="row ">
-                    <div id="animated-ocean-gif" class="col-12">
+            <div class="row ">
+                <div id="animated-ocean-gif" class="col-12">
 
-                        <!-- Heading and Sub-Heading -->
-                        <div id="opening-text" class="col-12">
-                            <h1 style="font-size:60px;">Swimming with the Sharks</h1>
-                            <h2>Dive in, the water's fine...</h2>
-                        </div>
+                    <!-- Intro Text -->
+                    <div id="opening-text" class="col-12">
+                        <h1> Swimming with the Sharks </h1>
+                        <h2> Come on in, the water's fine... </h2>
+                    </div>
 
-                        <!-- Header Scroll Icon -->
+                <!-- Story Scrolling -->
+                <div data-scroll-indicator-title="Introduction">
                         <div id="initial-scroll-icon" class="col-12 align-text-bottom">
                             <section id="section-1" class="initial-scroll">
                                 <h1></h1>
                                 <a href="#nj-incident-text-1"><span></span>Scroll</a>
                             </section>
                         </div>
-
-                    </div>
                 </div>
             </div>
+        </div>
 
     <!-- Story Scrolling Dot 1 -->
     <section id="scrolly-1">
-
+        <!-- Dot 1 Text -->
+        <article>
         <!-- Dot 1 Title -->
         <div data-scroll-indicator-title="Reign of Terror Begins">
 
-            <!-- Dot 1 Text -->
-            <article>
-
                 <!-- Dot 1 Text 1 -->
                 <div class="row step justify-content-center" data-step="">
-                    <div id="nj-incident-text-1" class="col-12">
-                        July 1916 was an inflection point for Sharks in the United States.
+                    <div id="dot-1-text-1" class="col-12">
+                        In July 1916, Sharks attacked and bit 5 people at New Jersey Shore beaches in the United States.
                     </div>
                 </div>
 
-                <!-- Dot 1 Text 2 -->
-                <div class="row step justify-content-center" data-step="">
-                    <div id="nj-incident-text-1" class="col-12">
-                        Sharks had previously been seen as harmless.
-                    </div>
+            <!-- Dot 1 Text 2 -->
+            <div class="row step justify-content-center" data-step="">
+                <div id="dot-1-text-2" class="col-12">
+                    Since then, the media and popular culture have unjustly characterized sharks as "predators" with an insatiable appetite for human flesh.
                 </div>
+            </div>
 
-                <!-- Dot 1 Text 3 -->
-                <div class="row step justify-content-center" data-step="">
-                    <div id="nj-incident-text-1" class="col-12">
-                        After the Jersey Shore attacks of 1916, the pendulum of public opinion swung to the
-                        other way.
-                    </div>
+            <div class="row step justify-content-center" data-step="">
+                <div id="dot-1-text-3" class="col-12">
+                    As we'll see that <i>nothing</i> could be further from the truth.
                 </div>
-
-            </article>
+            </div>
 
         </div>
+
+        </article>
 
         <!-- Dot 1 Media -->
-        <div class="sticky-thing-1">
-            <div>
-                <img src="./assets/philadelphia-inquirer.JPG"
-                     alt="Photo of a Philadelphia Inquirer article (1916).">
+             <div class="sticky-thing-1">
+                <div style="box-shadow: 0px 0px 5px lightgrey;">
+                    <img src="./assets/philadelphia-inquirer.JPG" alt="Photo of a Philadelphia Inquirer article (1916).">
+                </div>
             </div>
-        </div>
 
     </section>
 
@@ -109,14 +109,13 @@
                 <div class="row step justify-content-center" data-step="">
                     <div id="dot-2-text-1" class="col-12">
                         Since then, the media and popular culture have portrayed sharks as
-                        cold-blooded predators with an insatiable appetite for human flesh.
+                        cold-blooded "predators" with an insatiable appetite for human flesh.
                     </div>
                 </div>
 
                 <!-- Dot 2 Text 2 -->
                 <div class="row step justify-content-center" data-step="">
                     <div id="dot-2-text-2" class="col-12">
-
                         "There is a creature alive today, which has survived millions of years of evolution...
                          without change, without passion, without logic... It lives to kill.
                          A mindless eating machine, it will attack and devour anything." Jaws (1975)
@@ -434,10 +433,6 @@
 
                 <div class="row step justify-content-center" data-step="">
                     <div id="activities-text-1" class="col-12">
-                        What were people doing when they were bitten by a shark?
-                    </div>
-
-                    <div id="activities-text-2" class="col-12">
                         More than <strong>50%</strong> of all people bitten by a shark were swimming or surfing.
                     </div>
 
@@ -457,7 +452,7 @@
 
         <!-- Story Scrolling Dot 7 Title -->
         <div data-scroll-indicator-title="Shark Attack">
-            <div id="map-sec" style="height: 1000px" class="section global-background col-12" data-step="1">
+            <div id="map-sec" style="height: 1000px;background-image:./assets/Ocean.jpg" class="section global-background col-12" data-step="1">
                 <div class="container box box2" id="map-container">
                     <center><h3 style="position:relative">Activities: Provoked vs. UnProvoked Attacks </h3></center>
                     <div id="map-vis" class="vis-container"></div>

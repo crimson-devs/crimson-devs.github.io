@@ -225,8 +225,8 @@ MapVis.prototype.updateVis = function() {
         .style("opacity", .8);
       var txt = vis.idToCountry[d.id] + "<br>" + vis.idToRevenue[d.id];
       vis.tooltip.html(txt)
-        .style("left", (d3.pageX) + "px")
-        .style("top", (d3.pageY - 28) + "px");
+        .style("left", (event.pageX) + "px")
+        .style("top", (event.pageY - 28) + "px");
     })
     .on("mouseout", (d) => {
       vis.tooltip.transition()
@@ -320,7 +320,7 @@ MapVis.prototype.updateVis = function() {
   }
 
   var radius = 60;
-  var pieColors = ['#bd3257', '#a4fd71']
+  var pieColors = ['#456983', '#b21031']
   var piecolor = d3.scaleOrdinal()
     .domain(["Provoked", "Unprovoked"])
     .range(pieColors);

@@ -197,21 +197,21 @@ img {
     padding-bottom: 100px;
 }
 
-#nj-incident-text-1 {
+#dot-1-text-1 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
 }
 
-#nj-incident-text-2 {
+#dot-1-text-2 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
     padding: 30px;
 }
 
-#hook-text-1 {
+#dot-1-text-3 {
     color: white;
     font-size: 50px;
     font-family: Georgia;
@@ -517,7 +517,7 @@ img {
 .bar-chart-title {
     font-size: 25px;
     font-weight: 600;
-    fill: #456983;
+    fill: #000000;
 }
 
 .line-chart-title {
@@ -1889,8 +1889,8 @@ body{
 /* help from: https://stackoverflow.com/a/51610615 */
 .posterContainer {
     position: relative;
-    top: -20px;
-    margin: 0px;
+    top: 20px;
+    margin: 10px;
 }
 .poster {
     height: 180px;
@@ -1990,6 +1990,14 @@ ol.carousel-indicators li.active {
     top: 30 px;
     left: 16px;
     text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px darkgrey;
+}
+
+#opening-text {
+    color: #456983;
+    font-family: Georgia;
+    font-size: 85px;
+    margin-top: 180px;
+    text-align: center;
 }
 
 

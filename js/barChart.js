@@ -79,7 +79,7 @@ class BarChart {
             .text('Occurrences')
             .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', '#456983');
+            .style('fill', '#000000');
 
         // horizontal axis
         vis.svg.append('text')
@@ -88,7 +88,7 @@ class BarChart {
             .text('Activity')
             .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', '#456983');
+            .style('fill', '#000000');
 
         this.wrangleData()
 
@@ -131,7 +131,7 @@ class BarChart {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'grey')
-                    .attr('fill', '#c95151')
+                    .attr('fill', '#b21031')
 
                 vis.tooltip
                     .style('opacity', 1)
