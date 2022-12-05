@@ -119,7 +119,7 @@ MapVis.prototype.initVis = function () {
       .append('g')
       .append('text')
       .attr('class', 'legend-text')
-      .text('Number of Attacks')
+      .text('#Attacks')
       .attr('x', 23)
       .attr('y', -10)
       .attr('fill', 'black')
@@ -169,7 +169,7 @@ MapVis.prototype.updateDataSelection = function () {
     if (key in vis.countryToId) {
       var obj = {
         Market: key,
-        Gross: vis.selectedShark[key],
+        counts: vis.selectedShark[key],
       };
       curShark.push(obj);
     }
@@ -181,7 +181,7 @@ MapVis.prototype.updateDataSelection = function () {
     var countryId = vis.countryToId[d.Market];
     allCountryIds.push(countryId);
 
-    d.Gross = +d.Gross;
+    d.counts = +d.counts;
   });
 
   var countriesExcluded = ['Antarctica', 'Fiji', 'French Southern Territories'];
@@ -192,11 +192,11 @@ MapVis.prototype.updateDataSelection = function () {
 
   vis.idToRevenue = {};
   vis.data.forEach((d) => {
-    vis.idToRevenue[vis.countryToId[d.Market]] = d.Gross;
+    vis.idToRevenue[vis.countryToId[d.Market]] = d.counts;
   });
 
-  var sorted = vis.data.sort((a, b) => (a.Gross > b.Gross ? -1 : 1));
-  vis.topGross = sorted.slice(0, 3);
+  var sorted = vis.data.sort((a, b) => (a.counts > b.counts ? -1 : 1));
+  vis.topCounts = sorted.slice(0, 3);
 
   vis.updateVis();
 };
@@ -424,14 +424,14 @@ MapVis.prototype.updateVis = function () {
   legendPieText.exit().remove();
 
   vis.barX.domain(
-      d3.extent(vis.topGross, function (d) {
+      d3.extent(vis.topCounts, function (d) {
         return d.value;
       })
   );
-  var keys = vis.topGross.map((d) => d.Market);
+  var keys = vis.topCounts.map((d) => d.Market);
 
   vis.barY.domain(keys);
-  var rects = vis.svgCol2.selectAll('.rects').data(vis.topGross);
+  var rects = vis.svgCol2.selectAll('.rects').data(vis.topCounts);
 
   rects
       .enter()
@@ -444,22 +444,22 @@ MapVis.prototype.updateVis = function () {
         return 140 + i * 20;
       })
       .attr('x', function (d) {
-        return 40;
+        return 140;
       })
       .attr('width', function (d) {
-        return d.Gross;
+        return d.counts;
       })
       .attr('height', function (d) {
         return 15;
       })
       .attr('fill', (d) => {
-        return vis.color(d.Gross);
+        return vis.color(d.counts);
       });
   rects.exit().remove();
 
   var topCountryNames = vis.svgCol2
       .selectAll('.top-country-names')
-      .data(vis.topGross);
+      .data(vis.topCounts);
 
   topCountryNames
       .enter()
@@ -467,7 +467,7 @@ MapVis.prototype.updateVis = function () {
       .merge(topCountryNames)
       .attr('class', 'top-country-names')
       .attr('x', function (d) {
-        return 20;
+        return 120;
       })
       .attr('y', function (d, i) {
         return 150 + i * 20;
@@ -480,7 +480,7 @@ MapVis.prototype.updateVis = function () {
       .style('font-size', '13');
   topCountryNames.exit().remove();
 
-  var values = vis.svgCol2.selectAll('.values').data(vis.topGross);
+  var values = vis.svgCol2.selectAll('.values').data(vis.topCounts);
 
   values
       .enter()
@@ -490,16 +490,16 @@ MapVis.prototype.updateVis = function () {
       .duration(800)
       .attr('class', 'values')
       .attr('x', function (d) {
-        return d.Gross / 3000000 + 50;
+        return d.counts + 50;
       })
       .attr('y', function (d, i) {
         return 150 + i * 20;
       })
       .text((d) => {
-        return d.Gross;
+        return d.counts;
       })
       .attr('fill', (d) => {
-        return vis.color(d.Gross);
+        return vis.color(d.counts);
       })
       .style('font-size', '13');
   values.exit().remove();
@@ -642,7 +642,7 @@ MapVis.prototype.initVis = function () {
       .append('g')
       .append('text')
       .attr('class', 'legend-text')
-      .text('Number of Attacks')
+      .text('#Attacks')
       .attr('x', 23)
       .attr('y', -10)
       .attr('fill', 'black')
@@ -692,7 +692,7 @@ MapVis.prototype.updateDataSelection = function () {
     if (key in vis.countryToId) {
       var obj = {
         Market: key,
-        Gross: vis.selectedShark[key],
+        counts: vis.selectedShark[key],
       };
       curShark.push(obj);
     }
@@ -704,7 +704,7 @@ MapVis.prototype.updateDataSelection = function () {
     var countryId = vis.countryToId[d.Market];
     allCountryIds.push(countryId);
 
-    d.Gross = +d.Gross;
+    d.counts = +d.counts;
   });
 
   var countriesExcluded = ['Antarctica', 'Fiji', 'French Southern Territories'];
@@ -715,11 +715,11 @@ MapVis.prototype.updateDataSelection = function () {
 
   vis.idToRevenue = {};
   vis.data.forEach((d) => {
-    vis.idToRevenue[vis.countryToId[d.Market]] = d.Gross;
+    vis.idToRevenue[vis.countryToId[d.Market]] = d.counts;
   });
 
-  var sorted = vis.data.sort((a, b) => (a.Gross > b.Gross ? -1 : 1));
-  vis.topGross = sorted.slice(0, 3);
+  var sorted = vis.data.sort((a, b) => (a.counts > b.counts ? -1 : 1));
+  vis.topCounts = sorted.slice(0, 3);
 
   vis.updateVis();
 };
@@ -947,14 +947,14 @@ MapVis.prototype.updateVis = function () {
   legendPieText.exit().remove();
 
   vis.barX.domain(
-      d3.extent(vis.topGross, function (d) {
+      d3.extent(vis.topCounts, function (d) {
         return d.value;
       })
   );
-  var keys = vis.topGross.map((d) => d.Market);
+  var keys = vis.topCounts.map((d) => d.Market);
 
   vis.barY.domain(keys);
-  var rects = vis.svgCol2.selectAll('.rects').data(vis.topGross);
+  var rects = vis.svgCol2.selectAll('.rects').data(vis.topCounts);
 
   rects
       .enter()
@@ -967,22 +967,22 @@ MapVis.prototype.updateVis = function () {
         return 140 + i * 20;
       })
       .attr('x', function (d) {
-        return 40;
+        return 140;
       })
       .attr('width', function (d) {
-        return d.Gross;
+        return d.counts;
       })
       .attr('height', function (d) {
         return 15;
       })
       .attr('fill', (d) => {
-        return vis.color(d.Gross);
+        return vis.color(d.counts);
       });
   rects.exit().remove();
 
   var topCountryNames = vis.svgCol2
       .selectAll('.top-country-names')
-      .data(vis.topGross);
+      .data(vis.topCounts);
 
   topCountryNames
       .enter()
@@ -990,7 +990,7 @@ MapVis.prototype.updateVis = function () {
       .merge(topCountryNames)
       .attr('class', 'top-country-names')
       .attr('x', function (d) {
-        return 20;
+        return 120;
       })
       .attr('y', function (d, i) {
         return 150 + i * 20;
@@ -1003,7 +1003,7 @@ MapVis.prototype.updateVis = function () {
       .style('font-size', '13');
   topCountryNames.exit().remove();
 
-  var values = vis.svgCol2.selectAll('.values').data(vis.topGross);
+  var values = vis.svgCol2.selectAll('.values').data(vis.topCounts);
 
   values
       .enter()
@@ -1013,16 +1013,16 @@ MapVis.prototype.updateVis = function () {
       .duration(800)
       .attr('class', 'values')
       .attr('x', function (d) {
-        return d.Gross / 3000000 + 50;
+        return d.counts + 200 ;
       })
       .attr('y', function (d, i) {
         return 150 + i * 20;
       })
       .text((d) => {
-        return d.Gross;
+        return d.counts;
       })
       .attr('fill', (d) => {
-        return vis.color(d.Gross);
+        return vis.color(d.counts);
       })
       .style('font-size', '13');
   values.exit().remove();

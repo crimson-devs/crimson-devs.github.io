@@ -65,6 +65,7 @@ img {
     padding: 30px;
 }
 
+
 .sticky-thing-1 {
     position: -webkit-sticky;
     position: sticky;
@@ -304,6 +305,12 @@ img {
     padding: 30px;
 }
 
+#dot-8-text-2 {
+    color: white;
+    font-size: 30px;
+    font-family: Georgia;
+    padding: 30px;
+}
 
 
 #shark-bites-misconception-text-2 {
@@ -1951,101 +1958,6 @@ body{
     right: -760px;
     color: #F7BC06;
 }
-/* map carousel css */
-/* help from: https://stackoverflow.com/a/51610615 */
-.posterContainer {
-    position: relative;
-    top: 20px;
-    margin: 10px;
-}
-.poster {
-    height: 180px;
-    box-shadow: 2px 2px 5px grey;
-}
-
-.shadowOn {
-    box-shadow: 8px 8px 8px grey;
-}
-
-/* carousel dot navigator */
-ol.carousel-indicators {
-    position: absolute;
-    bottom: 0px;
-    margin: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-}
-
-
-.carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    background: grey;
-    border-radius: 100%;
-}
-
-ol.carousel-indicators li.active {
-    background: black;
-    width: 15px;
-    height: 15px;
-
-}
-.carousel .fp-tableCell {
-    height: 240px !important;
-}
-
-.carousel {
-    height: 240px !important;
-    width: 1100px !important;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-
-.carousel-control-prev {
-    position: absolute;
-    left: 0.5%;
-    top: 3%;
-    height: 180px !important;
-    width: 30px !important;
-}
-.carousel-control-next {
-    position: absolute;
-    right: 1%;
-    top: 3%;
-    height: 180px !important;
-    width: 30px !important;
-}
-
-/* changing carousel arrow style code adapted from: https://stackoverflow.com/a/46250461 */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 20px;
-    width: 20px;
-    background-size: 50%, 50%;
-    background-image: none;
-}
-
-.carousel-control-next-icon:after
-{
-    content: '>';
-    font-size: 50px;
-    color: black;
-}
-
-.carousel-control-prev-icon:after {
-    content: '<';
-    font-size: 50px;
-    color: black;
-}
-.caption {
-    font-size: 14px;
-}
-.zero-padding {
-    padding-right: 0px;
-    padding-left:0px;
-}
 
 #shark-population-decline-plot {
     margin-bottom: 100px;
@@ -2065,10 +1977,11 @@ ol.carousel-indicators li.active {
 #opening-text {
     color: #456983;
     font-family: Georgia;
-    font-size: 85px;
+    font-size: 120px;
     margin-top: 180px;
     text-align: center;
 }
+
 
 
 #cd-vertical-nav a {
@@ -2364,16 +2277,21 @@ body {
     right: -760px;
     color: #f7bc06;
 }
+
+
+
+
 /* map carousel css */
 /* help from: https://stackoverflow.com/a/51610615 */
 .posterContainer {
     position: relative;
-    top: 20px;
-    margin: 10px;
+    top: 40px;
+    margin: 0;
 }
 .poster {
-    height: 180px;
+    height: 220px;
     box-shadow: 2px 2px 5px grey;
+    margin-top: 40px;
 }
 
 .shadowOn {
@@ -2383,12 +2301,13 @@ body {
 /* carousel dot navigator */
 ol.carousel-indicators {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     margin: 0;
     left: 0;
     right: 0;
     width: auto;
 }
+
 
 .carousel-indicators li {
     width: 10px;
@@ -2401,21 +2320,23 @@ ol.carousel-indicators li.active {
     background: black;
     width: 15px;
     height: 15px;
+
 }
 .carousel .fp-tableCell {
-    height: 240px !important;
+    height: 320px !important;
 }
 
 .carousel {
-    height: 240px !important;
+    height: 320px !important;
     width: 1100px !important;
     padding-left: 30px;
     padding-right: 30px;
 }
 
+
 .carousel-control-prev {
     position: absolute;
-    left: 0.5%;
+    left: -3%;
     top: 3%;
     height: 180px !important;
     width: 30px !important;
@@ -2437,7 +2358,8 @@ ol.carousel-indicators li.active {
     background-image: none;
 }
 
-.carousel-control-next-icon:after {
+.carousel-control-next-icon:after
+{
     content: '>';
     font-size: 50px;
     color: black;
@@ -2453,8 +2375,18 @@ ol.carousel-indicators li.active {
 }
 .zero-padding {
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left:0px;
 }
+.col-xs-2{
+    background: #ffffff;
+    color:#FFF;
+}
+.col-half-offset{
+    margin-left:4.166666667%
+}
+
+
+
 
 #shark-population-decline-plot {
     margin-bottom: 100px;
