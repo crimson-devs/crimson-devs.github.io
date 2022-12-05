@@ -6,6 +6,14 @@ This project debunks the myth that sharks are man-eating predators and raises aw
 
 Because all external JavaScript libraries are retrieved from a CDN, there is nothing to install.
 
+## Libraries
+
+For this project, we used the following libraries:
+
+- [D3](https://d3js.org/)
+- [Scrollama](https://github.com/russellsamora/scrollama)
+- [easyScrollDots](https://easyscrolldots.primmis.com/)
+
 ## Usage
 
 To view our site, simply run the `index.html` file. 
