@@ -22,7 +22,7 @@ class BarChart {
         vis.margin = {top: 70, right: 90, bottom: 90, left: 80};
         vis.width = 800 - vis.margin.left - vis.margin.right;
 //        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = 700 - vis.margin.top - vis.margin.bottom;
+        vis.height = 600 - vis.margin.top - vis.margin.bottom;
 //        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // initialize the drawing area
@@ -82,6 +82,7 @@ class BarChart {
             .style('fill', '#000000');
 
         // horizontal axis
+
         vis.svg.append('text')
             .attr('x', vis.width - 35)
             .attr('y', vis.height + 50)

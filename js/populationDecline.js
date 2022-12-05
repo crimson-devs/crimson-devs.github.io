@@ -79,7 +79,7 @@ class PopulationDecline {
             .text('Shark Population (%)')
             .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', '#456983');
+            .style('fill', '#000000');
 
         // horizontal axis
         vis.svg.append('text')
@@ -88,7 +88,7 @@ class PopulationDecline {
             .text('Species')
             .style('font-size', 20)
             .style('font-weight', 600)
-            .style('fill', '#456983');
+            .style('fill', '#000000');
 
         this.wrangleData()
 
@@ -136,7 +136,7 @@ class PopulationDecline {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'grey')
-                    .attr('fill', '#456983')
+                    .attr('fill', 'rgb(69,105,131)')
 
                 vis.tooltip
                     .style('opacity', 1)

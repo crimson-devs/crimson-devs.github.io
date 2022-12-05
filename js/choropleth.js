@@ -46,7 +46,7 @@ class MapGlobe {
             .attr('class', 'title')
             .attr('id', 'map-title')
             .append('text')
-            .text('Fatal vs Non-Fatal Shark Bites Worldwide')
+            .text('Fatal vs Surviving Shark Bites Worldwide')
             .style('font-size', 25)
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
