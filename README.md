@@ -28,6 +28,10 @@ A video overview of our project may be found at:
 
 [YouTube](https://youtu.be/bxKufL--63E)
 
+## Data
+
+The *clean* data that we used for this project can be found in the `data` folder of our [source code].(https://github.com/crimson-devs/crimson-devs.github.io/tree/ryan)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
